@@ -14,6 +14,5 @@ gulp.task('open:server', function () {
     proxy: config.proxy
   });
 
-  // gulp.watch([config.css, config.templates], reload);
   gulp.watch([config.css, config.js], reload);
 });
