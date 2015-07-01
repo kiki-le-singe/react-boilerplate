@@ -12,6 +12,7 @@ gulp.task('serve', function(cb) {
     ['babelify:dev', 'sass:dev'],
     'server',
     'open:server',
+    'lint',
     'watch',
     cb);
 });
