@@ -26,7 +26,7 @@ gulp.task('babelify:dev', function() {
     .pipe(buffer()) // Useful?
 
     .pipe(sourcemaps.init())
-    // .pipe($.uglify())
+    .pipe($.uglify())
     .pipe(sourcemaps.write('.')) // writes .map file
 
     .pipe(gulp.dest(config.dev.dest));
