@@ -2,7 +2,7 @@
 
 module.exports = {
   babel: {
-    entries: 'app/scripts/init.js',
+    entries: 'app/scripts/main.js',
     dev: {
       dest: 'app/scripts/',
       source: 'script.dev.js'
