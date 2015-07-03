@@ -8,6 +8,6 @@ $(() => {
   Router.run(routes, (Handler) => { // Defaults to `Router.HashLocation`
   // Router.run(routes, Router.HistoryLocation, (Handler) => { // HTML5 History
     // React.render(<Handler/>, document.body);
-    React.render(<Handler />, document.getElementById('app'));
+    React.render(<Handler />, document.getElementById('container'));
   });
 });
