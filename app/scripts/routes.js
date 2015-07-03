@@ -7,10 +7,10 @@
 import React from 'react';
 import {Route, DefaultRoute, NotFoundRoute} from 'react-router';
 
-import App from './app';
-import Home from './home';
-import About from './about';
-import Hello from './hello';
+import App from './components/app';
+import Home from './components/home';
+import About from './components/about';
+import Hello from './components/hello';
 
 let routes = (
   <Route name="app" path="/" handler={App}>
