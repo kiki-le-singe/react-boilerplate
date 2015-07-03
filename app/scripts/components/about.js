@@ -2,7 +2,7 @@ import React from 'react';
 
 let About = React.createClass({
   render() {
-    return (<div>About you</div>);
+    return (<h1>About you</h1>);
   }
 });
 
