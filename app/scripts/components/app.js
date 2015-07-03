@@ -6,9 +6,7 @@ let App = React.createClass({
   render() {
     return (
       <div>
-        <header id="header" style={{background: 'lightcoral'}}>
-          <Nav />
-        </header>
+        <Nav />
         <div className="content" style={{background: 'lightblue'}}>
           <RouteHandler />
         </div>

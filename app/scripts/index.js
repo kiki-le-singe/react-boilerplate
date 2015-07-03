@@ -10,4 +10,8 @@ $(() => {
     // React.render(<Handler/>, document.body);
     React.render(<Handler />, document.getElementById('container'));
   });
+
+  // init foundation with the topbar plugin
+  let foundation = require('foundation');
+  $(document).foundation('topbar');
 });
