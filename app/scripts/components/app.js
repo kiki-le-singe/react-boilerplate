@@ -7,7 +7,7 @@ let App = React.createClass({
     return (
       <div>
         <Nav />
-        <div className="content" style={{background: 'lightblue'}}>
+        <div className="content">
           <RouteHandler />
         </div>
         <footer style={{background: 'lightgreen'}}>Footer</footer>
