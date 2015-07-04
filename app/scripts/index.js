@@ -32,6 +32,6 @@ $(() => {
   });
 
   // init foundation with the topbar plugin
-  let foundation = require('foundation');
+  let foundation = require('foundation'); // eslint-disable-line
   $(document).foundation('topbar');
 });
