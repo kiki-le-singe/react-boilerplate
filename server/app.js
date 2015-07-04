@@ -3,7 +3,7 @@
 ************/
 
 // Stubs
-var libraries = require('./stubs/libraries.json');
+var tools = require('./stubs/tools.json');
 
 // Module dependencies.
 var applicationRoot = __dirname,
@@ -33,13 +33,13 @@ router.get('/', function (request, response) {
   response.json({message: 'hooray! welcome to our api!'});
 });
 
-// Get a list of libraries
-router.route('/libraries')
+// Get a list of tools
+router.route('/tools')
   .get(function (request, response) {
     if (stubArg) { // if stub enabled
-      return response.json(libraries);
+      return response.json(tools);
     }
-    response.json(api.libraries);
+    response.json(api.tools);
   });
 
 // all of our routes will be prefixed with /api
