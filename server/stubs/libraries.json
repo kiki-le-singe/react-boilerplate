@@ -8,11 +8,11 @@
     "url" : "http://jquery.com/"
   },
   {
-    "name" : "Backbone.js",
-    "url" : "http://backbonejs.org/"
+    "name" : "React",
+    "url" : "https://facebook.github.io/react/index.html"
   },
   {
-    "name" : "Marionette.js",
-    "url" : "http://marionettejs.com/"
+    "name" : "Babel",
+    "url" : "https://babeljs.io/"
   }
 ]

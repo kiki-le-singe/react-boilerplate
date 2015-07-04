@@ -1,4 +1,4 @@
-exports.libraries = [
+exports.tools = [
   {
     name: 'HTML5 Boilerplate',
     url: 'http://www.w3.org/TR/html5/'
@@ -12,24 +12,24 @@ exports.libraries = [
     url: 'http://jquery.com/'
   },
   {
-    name: 'Backbone.js',
-    url: 'http://backbonejs.org/'
+    name: 'React',
+    url: 'https://facebook.github.io/react/index.html'
   },
   {
-    name: 'Marionette.js',
-    url: 'http://marionettejs.com/'
+    name: 'Babel',
+    url: 'https://babeljs.io/'
   },
   {
     name: 'Lo-Dash',
     url: 'http://lodash.com/'
   },
   {
-    name: 'Handlebars.js',
-    url: 'http://handlebarsjs.com/'
+    name: 'browserify',
+    url: 'http://browserify.org/'
   },
   {
-    name: 'RequireJS',
-    url: 'http://requirejs.org/'
+    name: 'Browsersync',
+    url: 'http://www.browsersync.io/'
   },
   {
     name: 'Express',
@@ -50,9 +50,5 @@ exports.libraries = [
   {
     name: 'chaijs',
     url: 'http://chaijs.com/'
-  },
-  {
-    name: 'BlueBird',
-    url: 'https://github.com/petkaantonov/bluebird'
   }
 ];
