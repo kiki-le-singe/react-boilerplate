@@ -11,12 +11,14 @@ import App from './components/app';
 import Home from './components/home';
 import About from './components/about';
 import Hello from './components/hello';
+import ToolBox from './components/tools/toolBox';
 
 let routes = (
   <Route name="app" path="/" handler={App}>
     <DefaultRoute name="home" handler={Home} />
     <Route name="hello" path="hello" handler={Hello} />
     <Route name="about" path="about" handler={About} />
+    <Route name="tools" path="tools" handler={ToolBox} />
     <NotFoundRoute handler={About} />
   </Route>
 );

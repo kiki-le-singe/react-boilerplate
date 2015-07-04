@@ -21,6 +21,7 @@ let Nav = React.createClass({
               <li><Link to="hello">Hello</Link></li>
               <li className="divider"></li>
               <li><Link to="about">About</Link></li>
+              <li><Link to="tools">Tools</Link></li>
             </ul>
           </section>
         </header>
