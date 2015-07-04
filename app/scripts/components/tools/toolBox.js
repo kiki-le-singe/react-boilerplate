@@ -4,6 +4,10 @@ import Tools from './tools';
 import ToolForm from './toolForm';
 
 let ToolBox = React.createClass({
+  propTypes: {
+    url: React.PropTypes.string.isRequired
+  },
+
   // componentDidMount is a method called automatically by React when a component is rendered
   componentDidMount() {
     this.loadToolsFromServer();
@@ -31,15 +35,14 @@ let ToolBox = React.createClass({
 
   loadToolsFromServer() {
     $.ajax({
-      url: 'api/tools', // uses this.props.url
+      url: this.props.url,
       dataType: 'json',
       cache: false,
       success: (data) => {
         this.setState({data: data});
       },
       error: (xhr, status, err) => {
-        console.error(status, err.toString()); // eslint-disable-line
-        // console.error(this.props.url, status, err.toString());
+        console.error(this.props.url, status, err.toString()); // eslint-disable-line
       }
     });
   }
