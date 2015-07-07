@@ -8,7 +8,7 @@ let Nav = React.createClass({
         <header className="header">
           <ul className="title-area">
             <li className="name">
-              <h1><a href="#">brand</a></h1>
+              <h1><a href="#">React Boilerplate</a></h1>
             </li>
             <li className="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
           </ul>
