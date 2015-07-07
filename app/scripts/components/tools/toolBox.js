@@ -24,21 +24,17 @@ let ToolBox = React.createClass({
   render() {
     if (this.state.data.length) {
       return (
-        <div className="tools row">
-          <div className="small-12 medium-12 large-12 columns">
-            <h1>Tools</h1>
-            <Tools data={this.state.data} />
-            <ToolForm />
-          </div>
+        <div className="tool-box">
+          <h1>Tools</h1>
+          <Tools data={this.state.data} />
+          <ToolForm />
         </div>
       );
     }
     return (
-      <div className="tools row">
-        <div className="small-12 medium-12 large-12 columns">
-          <h1>Tools</h1>
-          <p>tools.empty</p>
-        </div>
+      <div className="tool-box-empty">
+        <h1>Tools</h1>
+        <p>tools.empty</p>
       </div>
     );
   },
