@@ -1,18 +1,22 @@
 [
   {
-    "name" : "HTML5 Boilerplate",
-    "url" : "http://www.w3.org/TR/html5/"
+    "name" : "HTML5",
+    "url" : "http://www.w3.org/TR/html5/",
+    "logo": "/images/HTML5.png"
   },
   {
     "name" : "jQuery",
-    "url" : "http://jquery.com/"
+    "url" : "http://jquery.com/",
+    "logo": "/images/jquery.png"
   },
   {
     "name" : "React",
-    "url" : "https://facebook.github.io/react/index.html"
+    "url" : "https://facebook.github.io/react/index.html",
+    "logo": "/images/react.png"
   },
   {
     "name" : "Babel",
-    "url" : "https://babeljs.io/"
+    "url" : "https://babeljs.io/",
+    "logo": "/images/babel.png"
   }
 ]
