@@ -11,6 +11,7 @@ let Tools = React.createClass({
     let toolNodes = data.map((tool, index) => {
       return (
         <Tool url={tool.url} name={tool.name} key={index} />
+        <Tool url={tool.url} name={tool.name} logo={tool.logo} key={index} />
       );
     });
 
