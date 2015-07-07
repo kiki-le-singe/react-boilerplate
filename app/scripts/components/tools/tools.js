@@ -10,19 +10,24 @@ let Tools = React.createClass({
     let {data} = this.props;
     let toolNodes = data.map((tool, index) => {
       return (
-        <Tool url={tool.url} name={tool.name} key={index} />
         <Tool url={tool.url} name={tool.name} logo={tool.logo} key={index} />
       );
     });
 
     return (
-      <div className="tool-list">
-        <p>tools.you.now.have</p>
-        <ul className="list">
+      <div className="tool-list-wrapper">
+        <div className="row">
+          <div className="columns text-center">tools.you.now.have</div>
+        </div>
+        <div className="tool-list row">
           {toolNodes}
-        </ul>
-        <p>tools.installed</p>
-        <p>tools.enjoy.coding</p>
+        </div>
+        <div className="row">
+          <div className="columns text-center">tools.installed</div>
+        </div>
+        <div className="row">
+          <div className="columns text-center">tools.enjoy.coding</div>
+        </div>
       </div>
     );
   }
