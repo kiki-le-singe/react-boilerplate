@@ -19,5 +19,5 @@ gulp.task('css-watch', function () {
 gulp.task('watch', ['css-watch', 'js-watch']);
 
 gulp.task('js-watch', function () {
-  gulp.watch(config.js, ['babelify:dev']);
+  gulp.watch(config.js, ['scripts:dev']);
 });
