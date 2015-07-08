@@ -1,5 +1,7 @@
 'use strict';
 
+// http://www.browsersync.io/docs/gulp/
+  // http://www.browsersync.io/docs/gulp/#gulp-reload
 // https://github.com/BrowserSync/gulp-browser-sync
 // http://www.browsersync.io/docs/gulp/
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/server-with-livereload-and-css-injection.md
