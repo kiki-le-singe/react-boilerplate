@@ -9,7 +9,7 @@ gulp.task('default', ['serve']);
 
 gulp.task('serve', function(cb) {
   runSequence(
-    ['babelify:dev', 'sass:dev'],
+    ['scripts:dev', 'sass:dev'],
     'server',
     'open:server',
     'lint',
