@@ -46,6 +46,6 @@ var bundle = function bundle() {
     .pipe(gulp.dest(config.dev.dest));
 };
 
-gulp.task('scripts:dev', bundle); // so you can run `gulp js` to build the file
+gulp.task('scripts:dev', bundle); // so you can run `gulp scripts:dev` to build the file
 b.on('update', bundle); // on any dep update, runs the bundler
 b.on('log', gutil.log); // output build logs to terminal
