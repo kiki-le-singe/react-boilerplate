@@ -5,7 +5,7 @@ module.exports = {
     entries: 'app/scripts/index.js',
     dev: {
       dest: 'app/scripts/',
-      source: 'script.dev.js'
+      source: 'bundle.js'
     },
     dist: {
       dest: 'dist/js/',
