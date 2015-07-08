@@ -11,7 +11,6 @@
   // https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
 // https://www.npmjs.com/package/gutil
 // https://www.npmjs.com/package/lodash
-// https://www.npmjs.com/package/gulp-uglify
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
@@ -43,7 +42,6 @@ var bundle = function bundle() {
     .pipe(buffer())
     // optional, remove if you dont want sourcemaps
     .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
-    .pipe($.uglify())
     .pipe(sourcemaps.write('./')) // writes .map file
     .pipe(gulp.dest(config.dev.dest));
 };
