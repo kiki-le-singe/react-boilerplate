@@ -1,8 +1,10 @@
 // Encountered problems:
-// - Uses foundation with broserify
+// 1 - Uses foundation with broserify
+// 2 - Fast browserify with watchify
 // Resolved:
-// - http://foundation.zurb.com/forum/posts/24951-foundation-with-browserify
-// - https://github.com/thlorenz/browserify-shim
+// 1 - http://foundation.zurb.com/forum/posts/24951-foundation-with-browserify
+// 1 - https://github.com/thlorenz/browserify-shim
+// 2 - https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
 
 // Tutorial:
 // - https://facebook.github.io/react/docs/tutorial.html
