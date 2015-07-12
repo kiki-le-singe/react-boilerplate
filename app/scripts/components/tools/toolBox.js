@@ -7,14 +7,14 @@ let {PropTypes, Component} = React;
 
 class ToolBox extends Component {
   render() {
-    let {data} = this.props;
+    let {data, onToolSubmit} = this.props;
 
     if (data.length) {
       return (
         <div className="tool-box">
           <h1>Tools</h1>
           <Tools data={data} />
-          <ToolForm />
+          <ToolForm onToolSubmit={onToolSubmit} />
           <AddToolButton />
         </div>
       );
