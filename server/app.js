@@ -26,6 +26,8 @@ app.use(express.static(path.join(applicationRoot, '../app')));
  ROUTES FOR OUR API
 ********************/
 
+// Docs: http://expressjs.com/guide/routing.html
+
 var router = express.Router(); // get an instance of the express Router
 
 // test route to make sure everything is working (accessed at GET http://localhost:9000/api)
