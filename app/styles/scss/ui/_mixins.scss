@@ -1,0 +1,7 @@
+// BOX SHADOW
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $distance: 0, $color: $grey, $inset: false) {
+  @if $inset {
+    box-shadow: $x $y $blur $distance $color inset;
+  }
+  box-shadow: $x $y $blur $distance $color;
+}
