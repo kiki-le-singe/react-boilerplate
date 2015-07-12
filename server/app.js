@@ -41,7 +41,12 @@ router.route('/tools')
     if (stubArg) { // if stub enabled
       return response.json(stubTools);
     }
-    response.json(api.tools);
+    response.status(200).json(api.tools);
+  })
+  .post(function (request, response) {
+    var tools = api.tools;
+    tools.push(request.body);
+    response.status(200).json(tools);
   });
 
 // all of our routes will be prefixed with /api
