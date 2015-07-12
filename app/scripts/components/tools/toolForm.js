@@ -32,4 +32,8 @@ class ToolForm extends Component {
   }
 }
 
+ToolForm.propTypes = {
+  onToolSubmit: PropTypes.func.isRequired
+};
+
 export default ToolForm;
