@@ -15,7 +15,7 @@ class ToolForm extends Component {
   render() {
     return (
       <form className="tool-form" onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="Title" ref="title" />
+        <input type="text" placeholder="Name" ref="name" />
         <input type="submit" value="Post" />
       </form>
     );
@@ -24,15 +24,15 @@ class ToolForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    let title = findDOMNode(this.refs.title).value.trim();
-    if (!title) {
+    let name = findDOMNode(this.refs.name).value.trim();
+    if (!name) {
       return;
     }
 
     // Communicate between components: https://facebook.github.io/react/tips/communicate-between-components.html
     // Calls the parent method that sends a request to the server
-    this.props.onToolSubmit({title: title});
-    findDOMNode(this.refs.title).value = '';
+    this.props.onToolSubmit({name: name});
+    findDOMNode(this.refs.name).value = '';
   }
 }
 
