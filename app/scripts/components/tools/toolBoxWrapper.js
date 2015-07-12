@@ -7,6 +7,11 @@ class ToolBoxWrapper extends React.Component {
   constructor(props) {
     super(props);
 
+    // Autobinding/No Autobinding:
+    // - https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding
+    // - https://facebook.github.io/react/docs/reusable-components.html#no-autobinding
+    this.handleToolSubmit = this.handleToolSubmit.bind(this);
+
     // Warning: getInitialState() is only supported for classes created using React.createClass.
     // getInitialState() executes exactly once during the lifecycle of the component
     // and sets up the initial state of the component.
