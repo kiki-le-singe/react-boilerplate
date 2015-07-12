@@ -3,7 +3,7 @@
 ************/
 
 // Stubs
-var tools = require('./stubs/tools.json');
+var stubTools = require('./stubs/tools.json');
 
 // Module dependencies.
 var applicationRoot = __dirname,
@@ -39,7 +39,7 @@ router.get('/', function (request, response) {
 router.route('/tools')
   .get(function (request, response) {
     if (stubArg) { // if stub enabled
-      return response.json(tools);
+      return response.json(stubTools);
     }
     response.json(api.tools);
   });
