@@ -23,7 +23,7 @@ class ToolBoxWrapper extends React.Component {
   }
 
   render() {
-    return <ToolBox data={this.state.data} />;
+    return <ToolBox data={this.state.data} onToolSubmit={this.handleToolSubmit} />;
   }
 
   loadToolsFromServer() {
@@ -38,6 +38,11 @@ class ToolBoxWrapper extends React.Component {
         console.error(this.props.url, status, err.toString()); // eslint-disable-line
       }
     });
+  }
+
+  handleToolSubmit(tool) {
+    console.log(tool);
+    // TODO: submit to the server and refresh the list
   }
 }
 
