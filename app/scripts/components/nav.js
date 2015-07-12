@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-let Nav = React.createClass({
+class Nav extends React.Component {
   render() {
     return (
       <nav className="top-bar" data-topbar role="navigation">
@@ -28,6 +28,6 @@ let Nav = React.createClass({
       </nav>
     );
   }
-});
+}
 
 export default Nav;

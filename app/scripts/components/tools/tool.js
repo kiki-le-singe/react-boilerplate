@@ -1,12 +1,8 @@
 import React from 'react';
 
-let Tool = React.createClass({
-  propTypes: {
-      logo: React.PropTypes.string,
-      url: React.PropTypes.string.isRequired,
-      name: React.PropTypes.string.isRequired
-  },
+let {PropTypes, Component} = React;
 
+class Tool extends Component {
   render() {
     let {logo, url, name} = this.props;
     let logoEl;
@@ -28,6 +24,12 @@ let Tool = React.createClass({
       </div>
     );
   }
-});
+}
+
+Tool.propTypes = {
+  logo: PropTypes.string,
+  url: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
+};
 
 export default Tool;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-let ToolForm = React.createClass({
+class ToolForm extends React.Component {
   render() {
     return (
       <div className="tool-form">
@@ -8,6 +8,6 @@ let ToolForm = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default ToolForm;

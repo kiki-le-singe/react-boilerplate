@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from './nav';
 import {RouteHandler} from 'react-router';
 
-let App = React.createClass({
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -14,6 +14,6 @@ let App = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default App;

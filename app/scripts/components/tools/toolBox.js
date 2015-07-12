@@ -3,11 +3,9 @@ import Tools from './tools';
 import ToolForm from './toolForm';
 import AddToolButton from './addToolButton';
 
-let ToolBox = React.createClass({
-  propTypes: {
-    data: React.PropTypes.array.isRequired
-  },
+let {PropTypes, Component} = React;
 
+class ToolBox extends Component {
   render() {
     let {data} = this.props;
 
@@ -28,6 +26,10 @@ let ToolBox = React.createClass({
       </div>
     );
   }
-});
+}
+
+ToolBox.propTypes = {
+  data: PropTypes.array.isRequired
+};
 
 export default ToolBox;

@@ -1,6 +1,8 @@
 import React from 'react/addons';
 import Tool from './tool';
 
+let {PropTypes, Component} = React;
+
 // https://facebook.github.io/react/docs/animation.html#getting-started
 let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
@@ -13,11 +15,7 @@ let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 // To use ReactTransitionGroup see: http://bl.ocks.org/mattborn/0e4f554713b78c408519
 // let ReactTransitionGroup = React.addons.TransitionGroup;
 
-let Tools = React.createClass({
-  propTypes: {
-      data: React.PropTypes.array.isRequired
-  },
-
+class Tools extends Component {
   render() {
     let {data} = this.props;
     let toolNodes = data.map((tool, index) => {
@@ -45,6 +43,10 @@ let Tools = React.createClass({
       </div>
     );
   }
-});
+}
+
+Tools.propTypes = {
+  data: PropTypes.array.isRequired
+};
 
 export default Tools;
