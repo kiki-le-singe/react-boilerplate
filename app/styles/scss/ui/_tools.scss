@@ -4,6 +4,25 @@
     color: $white;
     padding-left: 5%;
   }
+
+  .add-tool-btn {
+    @include box-shadow();
+
+    background-color: $red;
+    border: none;
+    border-radius: 50%;
+    bottom: 25px;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    height: 55.5px;
+    line-height: 56px;
+    position: fixed;
+    right: 15px;
+    text-align: center;
+    width: 55.5px;
+    z-index: 1;
+  }
 }
 
 .tool-list {
