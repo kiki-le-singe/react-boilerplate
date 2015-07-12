@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ToolBox from './toolBox';
+import api from './config/api.json';
 
 class ToolBoxWrapper extends React.Component {
   constructor(props) {
@@ -28,14 +29,14 @@ class ToolBoxWrapper extends React.Component {
 
   loadToolsFromServer() {
     $.ajax({
-      url: 'api/tools',
+      url: api.tools,
       dataType: 'json',
       cache: false,
       success: (data) => {
         this.setState({data: data});
       },
       error: (xhr, status, err) => {
-        console.error(this.props.url, status, err.toString()); // eslint-disable-line
+        console.error(api.tools, status, err.toString()); // eslint-disable-line
       }
     });
   }
