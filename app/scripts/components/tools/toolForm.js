@@ -26,8 +26,9 @@ class ToolForm extends Component {
       return;
     }
 
-    // TODO: send request to the server
-    React.findDOMNode(this.refs.title).value = '';
+    // Communicate between components: https://facebook.github.io/react/tips/communicate-between-components.html
+    // Calls the parent method that sends a request to the server
+    this.props.onToolSubmit({title: title});
     findDOMNode(this.refs.title).value = '';
   }
 }
