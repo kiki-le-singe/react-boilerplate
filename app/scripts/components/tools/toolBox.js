@@ -29,6 +29,7 @@ class ToolBox extends Component {
 }
 
 ToolBox.propTypes = {
+  onToolSubmit: PropTypes.func.isRequired,
   data: PropTypes.array.isRequired
 };
 
