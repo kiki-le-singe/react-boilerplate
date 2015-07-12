@@ -47,8 +47,19 @@ class ToolBoxWrapper extends React.Component {
   }
 
   handleToolSubmit(tool) {
-    console.log(tool);
-    // TODO: submit to the server and refresh the list
+    // Submit to the server and refresh the list
+    $.ajax({
+      url: api.tools,
+      dataType: 'json',
+      type: 'POST',
+      data: tool,
+      success: (data) => {
+        this.setState({data: data});
+      },
+      error: (xhr, status, err) => {
+        console.error(api.tools, status, err.toString()); // eslint-disable-line
+      }
+    });
   }
 }
 
