@@ -1,6 +1,7 @@
 import React from 'react';
 import Tools from './tools';
 import ToolForm from './toolForm';
+import AddToolButton from './addToolButton';
 
 let ToolBox = React.createClass({
   propTypes: {
@@ -16,6 +17,7 @@ let ToolBox = React.createClass({
           <h1>Tools</h1>
           <Tools data={data} />
           <ToolForm />
+          <AddToolButton />
         </div>
       );
     }
