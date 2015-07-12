@@ -1,6 +1,8 @@
 import React from 'react';
 
-class ToolForm extends React.Component {
+let {PropTypes, Component, findDOMNode} = React;
+
+class ToolForm extends Component {
   constructor() {
     super();
 
@@ -19,13 +21,14 @@ class ToolForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    let title = React.findDOMNode(this.refs.title).value.trim();
+    let title = findDOMNode(this.refs.title).value.trim();
     if (!title) {
       return;
     }
 
     // TODO: send request to the server
     React.findDOMNode(this.refs.title).value = '';
+    findDOMNode(this.refs.title).value = '';
   }
 }
 
