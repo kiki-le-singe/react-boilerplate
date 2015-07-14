@@ -1,11 +1,6 @@
 import React from 'react/addons';
-import ToolForm from './toolForm';
 
 let {Component, PropTypes} = React;
-
-// https://facebook.github.io/react/docs/animation.html#low-level-api-reacttransitiongroup
-// To use ReactTransitionGroup see: http://bl.ocks.org/mattborn/0e4f554713b78c408519
-let ReactTransitionGroup = React.addons.TransitionGroup;
 
 class AddToolButton extends Component {
   constructor() {
@@ -32,7 +27,7 @@ class AddToolButton extends Component {
 }
 
 AddToolButton.propTypes = {
-  onToolSubmit: PropTypes.func.isRequired
+  onAddToolButtonClick: PropTypes.func.isRequired
 };
 
 export default AddToolButton;
