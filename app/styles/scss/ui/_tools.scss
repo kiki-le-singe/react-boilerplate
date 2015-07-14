@@ -95,3 +95,13 @@
 .tool-leave.tool-leave-active {
   opacity: 0.01;
 }
+
+// *** Tool Form ***
+.tool-form-appear {
+  right: -100%;
+  transition: right 0.5s ease;
+}
+
+.tool-form-appear.tool-form-appear-active {
+  right: 10%;
+}
