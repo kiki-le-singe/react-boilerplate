@@ -3,7 +3,7 @@
 module.exports = {
   browserSync: {
     css: 'app/styles/css/**/*.css',
-    js: 'app/scripts/bundle.js',
+    js: 'app/js/bundle.js',
     proxy: 'http://localhost:9000'
   }
 };

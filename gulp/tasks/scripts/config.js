@@ -2,9 +2,9 @@
 
 module.exports = {
   babel: {
-    entries: 'app/scripts/index.js',
+    entries: 'app/js/index.js',
     dev: {
-      dest: 'app/scripts/',
+      dest: 'app/js/',
       source: 'bundle.js'
     },
     dist: {

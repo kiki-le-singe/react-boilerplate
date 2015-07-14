@@ -2,6 +2,6 @@
 
 module.exports = {
   eslint: {
-    src: ['app/scripts/**/*.js', '!app/scripts/bundle.js']
+    src: ['app/js/**/*.js', '!app/js/bundle.js']
   }
 };

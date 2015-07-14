@@ -41,7 +41,7 @@ b.transform(babelify);
 function bundle() {
   // start listening reload notifications
   // lrload.listen();
-  // lrload.monitor('app/scripts/bundle.js', {displayNotification: true});
+  // lrload.monitor('app/js/bundle.js', {displayNotification: true});
 
   return b.bundle()
     // log errors if they happen

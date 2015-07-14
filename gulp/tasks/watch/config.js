@@ -2,7 +2,7 @@
 
 module.exports = {
   watch: {
-    js: ['app/scripts/**/*.js', '!app/scripts/bundle.js'],
+    js: ['app/js/**/*.js', '!app/js/bundle.js'],
     scss: 'app/styles/scss/**/*.scss'
   }
 };
