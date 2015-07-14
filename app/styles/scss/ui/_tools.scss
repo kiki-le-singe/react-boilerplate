@@ -72,12 +72,13 @@
   .tool-form {
     @include box-shadow();
 
-    background: $blue;
+    background: $black;
     border-radius: 3px;
     bottom: 90px;
     margin: 12px 15px;
     padding: 10px 10px;
     position: fixed;
+    width: 300px;
   }
 }
 
@@ -120,5 +121,5 @@
 }
 
 .tool-form-appear.tool-form-appear-active {
-  right: 10%;
+  right: 0;
 }
