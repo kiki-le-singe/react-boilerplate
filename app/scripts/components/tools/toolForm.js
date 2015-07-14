@@ -40,7 +40,7 @@ class ToolForm extends Component {
             </div>
             <div className="row">
               <div className="columns">
-                <input type="submit" value="Post" />
+                <input type="submit" value="Post" className="button small radius" />
               </div>
             </div>
           </div>
