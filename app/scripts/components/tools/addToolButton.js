@@ -14,23 +14,20 @@ class AddToolButton extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  handleClick() {
+    this.setState({clicked: !this.state.clicked});
+
+    // Communicate between components: https://facebook.github.io/react/tips/communicate-between-components.html
+    // Calls the parent method that sends a request to the server
+    this.props.onAddToolButtonClick();
+  }
+
   render() {
     return (
       <a className="add-tool-btn" onClick={this.handleClick}>
         <i className="fi-plus"></i>
       </a>
     );
-  }
-
-  handleClick() {
-    let {onToolSubmit} = this.props;
-
-    React.render(
-      <ReactTransitionGroup>
-        <ToolForm onToolSubmit={onToolSubmit} />
-      </ReactTransitionGroup>,
-      document.getElementById('tool-form-wrapper')
-   );
   }
 }
 
