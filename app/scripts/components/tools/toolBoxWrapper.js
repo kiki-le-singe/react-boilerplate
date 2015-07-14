@@ -28,15 +28,13 @@ class ToolBoxWrapper extends React.Component {
     this.loadToolsFromServer();
   }
 
-  render() {
-    return <ToolBox data={this.state.data} onToolSubmit={this.handleToolSubmit} />;
-  }
-
-  loadToolsFromServer() {
+  handleToolSubmit(tool) {
+    // Submit to the server and refresh the list
     $.ajax({
       url: api.tools,
       dataType: 'json',
-      cache: false,
+      type: 'POST',
+      data: tool,
       success: (data) => {
         this.setState({data: data});
       },
@@ -46,13 +44,15 @@ class ToolBoxWrapper extends React.Component {
     });
   }
 
-  handleToolSubmit(tool) {
-    // Submit to the server and refresh the list
+  render() {
+    return <ToolBox data={this.state.data} onToolSubmit={this.handleToolSubmit} />;
+  }
+
+  loadToolsFromServer() {
     $.ajax({
       url: api.tools,
       dataType: 'json',
-      type: 'POST',
-      data: tool,
+      cache: false,
       success: (data) => {
         this.setState({data: data});
       },
