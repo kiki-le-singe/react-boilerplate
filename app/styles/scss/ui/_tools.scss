@@ -64,6 +64,23 @@
   }
 }
 
+#tool-form-wrapper {
+  bottom: 90px;
+  position: fixed;
+  right: 0;
+
+  .tool-form {
+    @include box-shadow();
+
+    background: $blue;
+    border-radius: 3px;
+    bottom: 90px;
+    margin: 12px 15px;
+    padding: 10px 10px;
+    position: fixed;
+  }
+}
+
 /*************/
 /* Animation */
 /*************/
