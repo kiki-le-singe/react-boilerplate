@@ -51,8 +51,13 @@
             "componentWillUnmount",
             "componentWillAppear",
             "componentDidAppear",
+            "componentWillEnter",
+            "componentDidEnter",
+            "componentWillLeave",
+            "componentDidLeave",
             "/^on.+$/",
             "/^get.+$/",
+            "/^handle.+$/",
             "/^render.+$/",
             "render"
           ]
