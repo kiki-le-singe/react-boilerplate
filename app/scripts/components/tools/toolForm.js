@@ -21,6 +21,20 @@ class ToolForm extends Component {
   componentDidAppear() {
     let el = this.refs.form.getDOMNode();
     el.className = el.className + ' tool-form-appear-active';
+  handleSubmit(e) {
+    e.preventDefault();
+
+    let name = findDOMNode(this.refs.name).value.trim();
+    let url = findDOMNode(this.refs.url).value.trim();
+    if (!name && !url) {
+      return;
+    }
+
+    // Communicate between components: https://facebook.github.io/react/tips/communicate-between-components.html
+    // Calls the parent method that sends a request to the server
+    this.props.onToolSubmit({name: name, url: url});
+    findDOMNode(this.refs.name).value = '';
+    findDOMNode(this.refs.url).value = '';
   }
 
   render() {
@@ -47,22 +61,6 @@ class ToolForm extends Component {
         </div>
       </form>
     );
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-
-    let name = findDOMNode(this.refs.name).value.trim();
-    let url = findDOMNode(this.refs.url).value.trim();
-    if (!name && !url) {
-      return;
-    }
-
-    // Communicate between components: https://facebook.github.io/react/tips/communicate-between-components.html
-    // Calls the parent method that sends a request to the server
-    this.props.onToolSubmit({name: name, url: url});
-    findDOMNode(this.refs.name).value = '';
-    findDOMNode(this.refs.url).value = '';
   }
 }
 
