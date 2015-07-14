@@ -6,6 +6,7 @@ class AddToolButton extends Component {
   constructor() {
     super();
 
+    this.state = {clicked: false};
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -18,9 +19,11 @@ class AddToolButton extends Component {
   }
 
   render() {
+    let icon = this.state.clicked ? (<i className="fi-x"></i>) : (<i className="fi-plus"></i>);
+
     return (
       <a className="add-tool-btn" onClick={this.handleClick}>
-        <i className="fi-plus"></i>
+        {icon}
       </a>
     );
   }
