@@ -49,6 +49,8 @@
             "componentWillUpdate",
             "componentDidUpdate",
             "componentWillUnmount",
+            "componentWillAppear",
+            "componentDidAppear",
             "/^on.+$/",
             "/^get.+$/",
             "/^render.+$/",
