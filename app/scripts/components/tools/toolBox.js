@@ -1,6 +1,6 @@
 import React from 'react';
 import Tools from './tools';
-import AddToolButton from './addToolButton';
+import ToolFormWrapper from './toolFormWrapper';
 
 let {PropTypes, Component} = React;
 
@@ -13,8 +13,7 @@ class ToolBox extends Component {
         <div className="tool-box">
           <h1>Tools</h1>
           <Tools data={data} />
-          <AddToolButton onToolSubmit={onToolSubmit} />
-          <div id="tool-form-wrapper"></div>
+          <ToolFormWrapper onToolSubmit={onToolSubmit} />
         </div>
       );
     }
