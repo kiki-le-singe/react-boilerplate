@@ -123,3 +123,12 @@
 .tool-form-enter.tool-form-enter-active {
   right: 0;
 }
+
+.tool-form-leave {
+  right: 0;
+  transition: right .5s;
+}
+
+.tool-form-leave.tool-form-leave-active {
+  right: -100%;
+}
