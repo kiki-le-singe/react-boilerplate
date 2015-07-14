@@ -12,6 +12,17 @@ class ToolForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillAppear(callback) {
+    let el = this.refs.form.getDOMNode();
+    el.className = el.className + ' tool-form-appear';
+    setTimeout(callback, 1); // need at least one tick to fire transition
+  }
+
+  componentDidAppear() {
+    let el = this.refs.form.getDOMNode();
+    el.className = el.className + ' tool-form-appear-active';
+  }
+
   render() {
     return (
       <form className="tool-form" onSubmit={this.handleSubmit} ref="form">
