@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 let {PropTypes, Component, findDOMNode} = React;
 
@@ -12,15 +13,31 @@ class ToolForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillAppear(callback) {
-    let el = this.refs.form.getDOMNode();
-    el.className = el.className + ' tool-form-appear';
+  componentWillEnter(callback) {
+    this.el = this.refs.form.getDOMNode();
+    this.$el = $(this.el);
+
+    this.$el.addClass('tool-form-enter');
     setTimeout(callback, 1); // need at least one tick to fire transition
   }
 
-  componentDidAppear() {
-    let el = this.refs.form.getDOMNode();
-    el.className = el.className + ' tool-form-appear-active';
+  componentDidEnter() {
+    this.$el.addClass('tool-form-enter-active');
+  }
+
+  componentWillLeave(callback) {
+    this.$el
+      .removeClass('tool-form-enter tool-form-enter-active')
+      .addClass('tool-form-leave tool-form-leave-active')
+      .one('webkitTransitionEnd', () => {
+        callback();
+      });
+  }
+
+  componentDidLeave() {
+    this.$el.removeClass('tool-form-leave tool-form-leave-active');
+  }
+
   handleSubmit(e) {
     e.preventDefault();
 
