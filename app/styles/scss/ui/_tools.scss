@@ -115,11 +115,11 @@
 }
 
 // *** Tool Form ***
-.tool-form-appear {
+.tool-form-enter {
   right: -100%;
-  transition: right 0.5s ease;
+  transition: right .5s;
 }
 
-.tool-form-appear.tool-form-appear-active {
+.tool-form-enter.tool-form-enter-active {
   right: 0;
 }
