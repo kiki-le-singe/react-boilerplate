@@ -64,29 +64,34 @@
   }
 }
 
-.example-appear {
+/*************/
+/* Animation */
+/*************/
+
+// *** Tool ***
+.tool-appear {
   opacity: 0.01;
   transition: opacity .5s ease-in;
 }
 
-.example-appear.example-appear-active {
+.tool-appear.tool-appear-active {
   opacity: 1;
 }
 
-.example-enter {
+.tool-enter {
   opacity: 0.01;
   transition: opacity .5s ease-in;
 }
 
-.example-enter.example-enter-active {
+.tool-enter.tool-enter-active {
   opacity: 1;
 }
 
-.example-leave {
+.tool-leave {
   opacity: 1;
   transition: opacity .5s ease-in;
 }
 
-.example-leave.example-leave-active {
+.tool-leave.tool-leave-active {
   opacity: 0.01;
 }

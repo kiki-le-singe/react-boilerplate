@@ -30,7 +30,7 @@ class Tools extends Component {
           <div className="columns text-center">tools.you.now.have</div>
         </div>
         <div className="tool-list row">
-          <ReactCSSTransitionGroup transitionName="example" transitionAppear={true}>
+          <ReactCSSTransitionGroup transitionName="tool" transitionAppear={true}>
             {toolNodes}
           </ReactCSSTransitionGroup>
         </div>
