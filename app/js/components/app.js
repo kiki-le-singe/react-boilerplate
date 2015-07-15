@@ -1,6 +1,7 @@
 import React from 'react';
-import Nav from './nav';
 import {RouteHandler} from 'react-router';
+import Nav from './nav';
+import Footer from './footer';
 
 class App extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class App extends React.Component {
         <div className="content">
           <RouteHandler />
         </div>
-        <footer style={{background: 'lightgreen'}}>Footer</footer>
+        <Footer />
       </div>
     );
   }
