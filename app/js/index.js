@@ -31,6 +31,7 @@ $(() => {
   // Check this repo: https://github.com/zilverline/react-tap-event-plugin
   injectTapEventPlugin();
 
+  // https://github.com/rackt/react-router/blob/master/docs/guides/overview.md
   // http://rackt.github.io/react-router/#Router.run
   Router.run(AppRoutes, (Handler) => { // Defaults to `Router.HashLocation`
   // Router.run(routes, Router.HistoryLocation, (Handler) => { // HTML5 History
