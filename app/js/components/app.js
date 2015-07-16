@@ -1,6 +1,7 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
 import { AppBar, IconButton, Styles } from 'material-ui';
+import AppLeftNav from './app-left-nav';
 
 let {PropTypes, Component} = React;
 
@@ -19,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <AppLeftNav ref="leftNav" />
         <div className="content">
           <RouteHandler />
         </div>
