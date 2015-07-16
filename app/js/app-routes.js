@@ -13,7 +13,7 @@ import About from './components/about';
 import Hello from './components/hello';
 import ToolBoxWrapper from './components/tools/toolBoxWrapper';
 
-let routes = (
+let AppRoutes = (
   <Route name="app" path="/" handler={App}>
     <DefaultRoute name="home" handler={Home} />
     <Route name="hello" path="hello" handler={Hello} />
@@ -23,4 +23,4 @@ let routes = (
   </Route>
 );
 
-export default routes;
+export default AppRoutes;
