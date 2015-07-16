@@ -26,8 +26,7 @@ import AppRoutes from './app-routes';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 $(() => {
-
-  // @mui: needs withs material-ui
+  // @mui: needs withs material-ui - important
   // Needed for onTouchTap. Can go away when react 1.0 release
   // Check this repo: https://github.com/zilverline/react-tap-event-plugin
   injectTapEventPlugin();
