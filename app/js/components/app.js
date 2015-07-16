@@ -1,7 +1,5 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
-import Nav from './nav';
-import Footer from './footer';
 // @mui: needs withs material-ui
 import mui from 'material-ui';
 
@@ -22,11 +20,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav />
         <div className="content">
           <RouteHandler />
         </div>
-        <Footer />
       </div>
     );
   }
