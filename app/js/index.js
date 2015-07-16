@@ -38,8 +38,4 @@ $(() => {
     // React.render(<Handler/>, document.body);
     React.render(<Handler />, document.getElementById('app'));
   });
-
-  // init foundation with the topbar plugin
-  let foundation = require('foundation'); // eslint-disable-line
-  $(document).foundation('topbar');
 });
