@@ -1,6 +1,6 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
-import mui from 'material-ui';
+import { AppBar, IconButton, Styles } from 'material-ui';
 
 let {PropTypes, Component} = React;
 
