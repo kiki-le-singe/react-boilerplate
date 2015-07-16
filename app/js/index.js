@@ -22,7 +22,7 @@ import $ from 'jquery';
 import React from 'react';
 import Router from 'react-router';
 import routes from './routes';
-// @mui: needs withs material-ui
+// @mui: needs withs material-ui - important
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 $(() => {
