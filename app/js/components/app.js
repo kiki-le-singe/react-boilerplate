@@ -8,8 +8,6 @@ let {PropTypes, Component} = React;
 let ThemeManager = new Styles.ThemeManager();
 
 class App extends Component {
-  // @mui: needs withs material-ui
-  // Important! @see http://material-ui.com/#/customization/themes
   getChildContext() {
     return {
       muiTheme: ThemeManager.getCurrentTheme()
@@ -28,8 +26,6 @@ class App extends Component {
   }
 }
 
-// @material-ui
-// Important! @see http://material-ui.com/#/customization/themes
 App.childContextTypes = {
   muiTheme: PropTypes.object
 };
