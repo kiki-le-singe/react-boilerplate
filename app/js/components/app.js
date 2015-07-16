@@ -1,6 +1,5 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
-// @mui: needs withs material-ui
 import mui from 'material-ui';
 
 let {PropTypes, Component} = React;
