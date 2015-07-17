@@ -34,6 +34,8 @@ var customOpts = {
 };
 var opts = _.assign({}, watchify.args, customOpts);
 var b = watchify(browserify(opts));
+
+// add transformations here
 b.transform(babelify);
 // b.transform(lrload);
 
