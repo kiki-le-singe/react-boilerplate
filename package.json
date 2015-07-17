@@ -13,6 +13,9 @@
   "keywords": [
     "boilerplate",
     "react",
+    "react-router",
+    "material-ui",
+    "font-awesome",
     "es6",
     "babeljs",
     "browserify",
