@@ -25,7 +25,7 @@ var watchify = require('watchify');
 var _ = require('lodash');
 var browserify = require('browserify');
 // var lrload = require('livereactload');
-var config = require('./config').babel;
+var config = require('./config').browserify;
 
 // add custom browserify options here
 var customOpts = {

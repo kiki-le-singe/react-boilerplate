@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  babel: {
+  browserify: {
     entries: 'app/js/index.js',
     dev: {
       dest: 'app/js/',
