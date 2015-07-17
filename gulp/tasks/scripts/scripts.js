@@ -16,7 +16,6 @@
   // https://github.com/milankinen/livereactload/blob/master/examples/05-build-systems/gulpfile.js
 
 var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
 var sourcemaps = require('gulp-sourcemaps');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
