@@ -2,7 +2,7 @@ import React from 'react/addons';
 import AddToolButton from './addToolButton';
 import ToolForm from './toolForm';
 
-let {Component, PropTypes} = React;
+let { Component } = React;
 
 // https://facebook.github.io/react/docs/animation.html#getting-started
 let TransitionGroup = React.addons.TransitionGroup;
@@ -26,7 +26,7 @@ class ToolFormWrapper extends Component {
   render() {
     let form;
     if (this.state.clicked) {
-      form = (<ToolForm onToolSubmit={this.props.onToolSubmit} key={1} />);
+      form = (<ToolForm key={1} />);
     }
 
     return (
@@ -39,9 +39,5 @@ class ToolFormWrapper extends Component {
     );
   }
 }
-
-ToolFormWrapper.propTypes = {
-  onToolSubmit: PropTypes.func.isRequired
-};
 
 export default ToolFormWrapper;

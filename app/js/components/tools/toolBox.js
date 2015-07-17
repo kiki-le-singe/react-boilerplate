@@ -6,14 +6,14 @@ let {PropTypes, Component} = React;
 
 class ToolBox extends Component {
   render() {
-    let {data, onToolSubmit} = this.props;
+    let {data} = this.props;
 
     if (data.length) {
       return (
         <div className="tool-box">
           <h1>Tools</h1>
           <Tools data={data} />
-          <ToolFormWrapper onToolSubmit={onToolSubmit} />
+          <ToolFormWrapper />
         </div>
       );
     }
@@ -27,7 +27,6 @@ class ToolBox extends Component {
 }
 
 ToolBox.propTypes = {
-  onToolSubmit: PropTypes.func.isRequired,
   data: PropTypes.array.isRequired
 };
 
