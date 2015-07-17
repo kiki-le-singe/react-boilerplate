@@ -3,7 +3,9 @@ import React from 'react';
 import ToolBox from './toolBox';
 import api from './config/api.json';
 
-class ToolBoxWrapper extends React.Component {
+let { PropTypes, Component } = React;
+
+class ToolBoxWrapper extends Component {
   constructor(props) {
     super(props);
 
@@ -28,6 +30,15 @@ class ToolBoxWrapper extends React.Component {
     this.loadToolsFromServer();
   }
 
+  // Understand using React Context:
+  // - https://facebook.github.io/react/blog/2014/03/28/the-road-to-1.0.html#context
+  // - https://www.tildedave.com/2014/11/15/introduction-to-contexts-in-react-js.html
+  getChildContext() {
+    return {
+      onToolSubmit: this.handleToolSubmit
+    };
+  }
+
   handleToolSubmit(tool) {
     // Submit to the server and refresh the list
     $.ajax({
@@ -45,7 +56,7 @@ class ToolBoxWrapper extends React.Component {
   }
 
   render() {
-    return <ToolBox data={this.state.data} onToolSubmit={this.handleToolSubmit} />;
+    return <ToolBox data={this.state.data} />;
   }
 
   loadToolsFromServer() {
@@ -62,6 +73,10 @@ class ToolBoxWrapper extends React.Component {
     });
   }
 }
+
+ToolBoxWrapper.childContextTypes = {
+  onToolSubmit: PropTypes.func
+};
 
 ToolBoxWrapper.defaultProps = {initialData: []};
 
