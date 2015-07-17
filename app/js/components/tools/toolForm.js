@@ -47,9 +47,8 @@ class ToolForm extends Component {
       return;
     }
 
-    // Communicate between components: https://facebook.github.io/react/tips/communicate-between-components.html
-    // Calls the parent method that sends a request to the server
-    this.props.onToolSubmit({name: name, url: url});
+    // Calls the parent method passed by context that sends a request to the server
+    this.context.onToolSubmit({name: name, url: url});
     findDOMNode(this.refs.name).value = '';
     findDOMNode(this.refs.url).value = '';
   }
@@ -81,8 +80,8 @@ class ToolForm extends Component {
   }
 }
 
-ToolForm.propTypes = {
-  onToolSubmit: PropTypes.func.isRequired
+ToolForm.contextTypes = {
+  onToolSubmit: PropTypes.func
 };
 
 export default ToolForm;
