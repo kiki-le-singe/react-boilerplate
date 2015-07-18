@@ -19,7 +19,7 @@ class AddToolButton extends Component {
   }
 
   render() {
-    let icon = this.state.clicked ? (<i className="fi-x"></i>) : (<i className="fi-plus"></i>);
+    let icon = this.state.clicked ? <i className="fi-x"></i> : <i className="fi-plus"></i>;
 
     return (
       <a className="add-tool-btn" onClick={this.handleClick}>
