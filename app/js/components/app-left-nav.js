@@ -7,6 +7,7 @@ let menuItems = [
   { route: 'hello', text: 'Hello' },
   { route: 'about', text: 'About' },
   { route: 'tools', text: 'Tools' },
+  { route: 'my-react-canvas', text: 'My React Canvas' },
   { type: MenuItem.Types.SUBHEADER, text: 'Resources' },
   { type: MenuItem.Types.LINK, payload: 'http://facebook.github.io/react', text: 'React' },
   { type: MenuItem.Types.LINK, payload: 'https://github.com/callemall/material-ui', text: 'GitHub: Material UI' },

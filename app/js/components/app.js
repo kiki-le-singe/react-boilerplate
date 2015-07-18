@@ -23,6 +23,7 @@ class App extends Component {
     let title =
       this.context.router.isActive('hello') ? 'Hello' :
       this.context.router.isActive('about') ? 'About' :
+      this.context.router.isActive('my-react-canvas') ? 'My React Canvas' :
       this.context.router.isActive('tools') ? 'Tools' : '';
 
     let githubButton = (
