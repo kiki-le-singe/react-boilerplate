@@ -36,7 +36,9 @@ var opts = _.assign({}, watchify.args, customOpts);
 var b = watchify(browserify(opts));
 
 // add transformations here
-b.transform(babelify);
+b.transform(babelify.configure({
+  stage: 0 // enable entire experimental ES7 features
+}));
 // b.transform(lrload);
 
 function bundle() {
