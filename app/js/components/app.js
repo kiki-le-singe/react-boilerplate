@@ -9,6 +9,7 @@ let ThemeManager = new Styles.ThemeManager();
 
 class App extends Component {
 
+  // The class' constructor now assumes the role previously filled by componentWillMount
   constructor() {
     super();
     this.onLeftIconButtonTouchTap = this.onLeftIconButtonTouchTap.bind(this);
