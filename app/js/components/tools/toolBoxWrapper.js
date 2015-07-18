@@ -6,13 +6,10 @@ import api from './config/api.json';
 let { PropTypes, Component } = React;
 
 class ToolBoxWrapper extends Component {
+
+  // The class' constructor now assumes the role previously filled by componentWillMount
   constructor(props) {
     super(props);
-
-    // Autobinding/No Autobinding:
-    // - https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding
-    // - https://facebook.github.io/react/docs/reusable-components.html#no-autobinding
-    this.handleToolSubmit = this.handleToolSubmit.bind(this);
 
     // Warning: getInitialState() is only supported for classes created using React.createClass.
     // getInitialState() executes exactly once during the lifecycle of the component
@@ -39,7 +36,12 @@ class ToolBoxWrapper extends Component {
     };
   }
 
-  handleToolSubmit(tool) {
+  // The ES6 way
+  // # Autobinding/No Autobinding:
+  // - https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding
+  // - https://facebook.github.io/react/docs/reusable-components.html#no-autobinding
+  // Here the ES7 way is used. @see React on ES6+ by Steven Lusher: http://babeljs.io/blog/2015/06/07/react-on-es6-plus/
+  handleToolSubmit = (tool) => {
     // Submit to the server and refresh the list
     $.ajax({
       url: api.tools,

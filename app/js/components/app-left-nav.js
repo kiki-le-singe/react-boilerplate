@@ -17,21 +17,11 @@ let menuItems = [
 ];
 
 class AppLeftNav extends Component {
-
-  constructor() {
-    super();
-
-    this.toggle = this.toggle.bind(this);
-    this.getSelectedIndex = this.getSelectedIndex.bind(this);
-    this.onLeftNavChange = this.onLeftNavChange.bind(this);
-    this.onHeaderClick = this.onHeaderClick.bind(this);
-  }
-
-  onLeftNavChange(e, key, payload) {
+  onLeftNavChange = (e, key, payload) => {
     this.context.router.transitionTo(payload.route);
   }
 
-  onHeaderClick() {
+  onHeaderClick = () => {
     this.context.router.transitionTo('home');
     this.refs.leftNav.close();
   }
@@ -51,7 +41,7 @@ class AppLeftNav extends Component {
     };
   }
 
-  getSelectedIndex() {
+  getSelectedIndex = () => {
     let currentItem;
 
     for (let i = menuItems.length - 1; i >= 0; i--) {
@@ -80,7 +70,7 @@ class AppLeftNav extends Component {
     );
   }
 
-  toggle() {
+  toggle = () => {
     this.refs.leftNav.toggle();
   }
 }

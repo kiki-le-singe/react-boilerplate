@@ -8,13 +8,6 @@ let {PropTypes, Component} = React;
 let ThemeManager = new Styles.ThemeManager();
 
 class App extends Component {
-
-  // The class' constructor now assumes the role previously filled by componentWillMount
-  constructor() {
-    super();
-    this.onLeftIconButtonTouchTap = this.onLeftIconButtonTouchTap.bind(this);
-  }
-
   // @mui: needs withs material-ui - important
   getChildContext() {
     return {
@@ -22,7 +15,7 @@ class App extends Component {
     };
   }
 
-  onLeftIconButtonTouchTap() {
+  onLeftIconButtonTouchTap = () => {
     this.refs.leftNav.toggle();
   }
 

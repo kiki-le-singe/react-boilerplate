@@ -7,10 +7,9 @@ class AddToolButton extends Component {
     super();
 
     this.state = {clicked: false};
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState({clicked: !this.state.clicked});
 
     // Communicate between components: https://facebook.github.io/react/tips/communicate-between-components.html
