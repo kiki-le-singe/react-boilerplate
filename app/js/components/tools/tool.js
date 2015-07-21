@@ -5,7 +5,7 @@ let {PropTypes, Component} = React;
 
 class Tool extends Component {
   render() {
-    let {logo, url, name} = this.props;
+    let {logo, url, name, text} = this.props;
     let logoEl;
 
     if (logo) {
@@ -22,6 +22,7 @@ class Tool extends Component {
           {logoEl}
         </Paper>
         <div className="tool__info">
+          <p>{text}</p>
           <FlatButton label={name} linkButton={true} secondary={true} href={url} target="_blank" />
         </div>
       </Paper>
@@ -32,7 +33,8 @@ class Tool extends Component {
 Tool.propTypes = {
   logo: PropTypes.string,
   url: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 };
 
 export default Tool;
