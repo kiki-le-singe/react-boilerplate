@@ -25,16 +25,16 @@ class Tools extends Component {
     });
 
     return (
-      <div className="tool-list-wrapper">
-        <div>tools.you.now.have</div>
-        <div className="tool-list">
+      <section className="tools">
+        <p>tools.you.now.have</p>
+        <div className="tools__list">
           <ReactCSSTransitionGroup transitionName="tool" transitionAppear={true}>
             {toolNodes}
           </ReactCSSTransitionGroup>
         </div>
-        <div>tools.installed</div>
-        <div>tools.enjoy.coding</div>
-      </div>
+        <p>tools.installed</p>
+        <p>tools.enjoy.coding</p>
+      </section>
     );
   }
 }
