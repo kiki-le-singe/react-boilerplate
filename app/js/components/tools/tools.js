@@ -20,7 +20,7 @@ class Tools extends Component {
     let {data} = this.props;
     let toolNodes = data.map((tool, index) => {
       return (
-        <Tool url={tool.url} name={tool.name} logo={tool.logo} key={index} />
+        <Tool url={tool.url} name={tool.name} logo={tool.logo} text={tool.text} key={index} />
       );
     });
 
