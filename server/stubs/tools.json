@@ -1,21 +1,25 @@
 [
   {
     "name" : "HTML5",
+    "text" : "5th major revision of the core language of the World Wide Web: the Hypertext Markup Language (HTML).",
     "url" : "http://www.w3.org/TR/html5/",
     "logo": "/images/HTML5.png"
   },
   {
     "name" : "jQuery",
+    "text" : "jQuery is a fast, small, and feature-rich JavaScript library.",
     "url" : "http://jquery.com/",
     "logo": "/images/jquery.png"
   },
   {
     "name" : "React",
+    "text" : "A javascript library for building user interfaces.",
     "url" : "https://facebook.github.io/react/index.html",
     "logo": "/images/react.png"
   },
   {
     "name" : "Babel",
+    "text" : "Babel is a JavaScript compiler. Use next generation JavaScript, today.",
     "url" : "https://babeljs.io/",
     "logo": "/images/babel.png"
   }
