@@ -1,7 +1,7 @@
 'use strict';
 
 var sassDir = 'app/styles/scss';
-var fontAwesomeIconFontsDir = 'app/bower_components/foundation-icon-fonts/';
+var fontAwesomeIconFontsDir = '/fonts/';
 
 module.exports = {
   sass: {
@@ -21,7 +21,7 @@ module.exports = {
       fontAwesomeIconFontsDir + '*.otf'
     ],
     dev: {
-      path: '/fonts' // in node_modules/font-awesome/fonts/
+      path: fontAwesomeIconFontsDir // in node_modules/font-awesome/fonts/
     },
     dist: {
       path: 'fonts',
