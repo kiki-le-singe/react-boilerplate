@@ -1,10 +1,5 @@
 
 .tool-box {
-  h1 {
-    color: $white;
-    padding-left: 5%;
-  }
-
   .add-tool-btn {
     @include box-shadow();
 
@@ -25,42 +20,29 @@
   }
 }
 
-.tool-list {
-  .tool {
-    @include box-shadow();
+.tools__list {
+  padding: 5%;
+}
 
-    background: $white;
-    border-radius: 3px;
-    padding: 10px 10px;
-    margin: 12px 15px;
+.tool {
+  margin-bottom: 20px;
+  padding: 5%;
 
-    &:last-child {
-      float: left;
-    }
-  }
-
-  .tool__info {
-    @extend .text-center;
-  }
-
-  img, .tool__no-logo {
-    @extend .text-center;
-
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px $grey;
-    display: block;
+  .tool__logo {
+    display: table-cell;
     height: 8em;
-    margin: 1em auto;
+    text-align: center;
+    vertical-align: middle;
     width: 8em;
   }
 
-  .tool__no-logo {
-    span {
-      height: 8em;
-      width: 8em;
-      display: table-cell;
-      vertical-align: middle
-    }
+  img {
+    height: 60%;
+    width: 60%;
+  }
+
+  .tool__info {
+
   }
 }
 
