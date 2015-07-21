@@ -16,7 +16,7 @@ class Tool extends Component {
     }
 
     return (
-      <div className="tool small-12 medium-2 large-2 columns">
+      <div className="tool">
         {logoEl}
         <div className="tool__info">
           <a href={url} target="_blank">{name}</a>

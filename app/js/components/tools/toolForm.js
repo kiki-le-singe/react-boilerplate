@@ -47,24 +47,14 @@ class ToolForm extends Component {
   render() {
     return (
       <form className="tool-form" onSubmit={this.handleSubmit} ref="form">
-        <div className="row">
-          <div className="columns">
-            <div className="row">
-              <div className="columns">
-                <input type="text" placeholder="Name" ref="name" />
-              </div>
-            </div>
-            <div className="row">
-              <div className="columns">
-                <input type="text" placeholder="Url" ref="url" />
-              </div>
-            </div>
-            <div className="row">
-              <div className="columns">
-                <input type="submit" value="Post" className="button small radius" />
-              </div>
-            </div>
-          </div>
+        <div>
+          <input type="text" placeholder="Name" ref="name" />
+        </div>
+        <div>
+          <input type="text" placeholder="Url" ref="url" />
+        </div>
+        <div>
+          <input type="submit" value="Post" className="button small radius" />
         </div>
       </form>
     );

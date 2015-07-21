@@ -26,20 +26,14 @@ class Tools extends Component {
 
     return (
       <div className="tool-list-wrapper">
-        <div className="row">
-          <div className="columns text-center">tools.you.now.have</div>
-        </div>
-        <div className="tool-list row">
+        <div>tools.you.now.have</div>
+        <div className="tool-list">
           <ReactCSSTransitionGroup transitionName="tool" transitionAppear={true}>
             {toolNodes}
           </ReactCSSTransitionGroup>
         </div>
-        <div className="row">
-          <div className="columns text-center">tools.installed</div>
-        </div>
-        <div className="row">
-          <div className="columns text-center">tools.enjoy.coding</div>
-        </div>
+        <div>tools.installed</div>
+        <div>tools.enjoy.coding</div>
       </div>
     );
   }
