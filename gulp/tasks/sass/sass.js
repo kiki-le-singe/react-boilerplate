@@ -21,7 +21,7 @@ gulp.task('sass:dev', function () {
 gulp.task('sass:dist', function () {
   return gulp.src(sassConfig.mainSassFile)
     .pipe($.sass())
-    .pipe($.concat('main.min.css'))
+    .pipe($.rename('main.min.css'))
     .pipe($.preprocess({context: {PATH: fontsConfig.dist.path}}))
     .pipe($.minifyCss())
     .pipe(gulp.dest(sassConfig.dist.dest));
