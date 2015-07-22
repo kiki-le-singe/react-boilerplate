@@ -1,0 +1,13 @@
+@import "../../../../node_modules/bourbon-neat/app/assets/stylesheets/neat-helpers";
+
+// Media Queries:
+// - https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/how-to-choose-breakpoints?hl=en
+// - http://foundation.zurb.com/docs/media-queries.html
+// - http://getbootstrap.com/css/#grid-media-queries
+
+// Breakpoints
+$desktop: new-breakpoint(min-width 64.063em);
+$phone-portrait: new-breakpoint(max-width 40em);
+$phone-landscape: new-breakpoint(max-width 46em max-height 26em);
+$tablet-landscape: new-breakpoint(min-height 48em max-width 64em);
+$tablet-portrait: new-breakpoint(min-height 64em max-width 50em);
