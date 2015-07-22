@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, FlatButton } from 'material-ui';
+import { Paper, RaisedButton } from 'material-ui';
 
 let {PropTypes, Component} = React;
 
@@ -23,7 +23,7 @@ class Tool extends Component {
         </Paper>
         <div className="tool__info">
           <p>{text}</p>
-          <FlatButton label={name} linkButton={true} secondary={true} href={url} target="_blank" />
+          <RaisedButton label={name} linkButton={true} secondary={true} href={url} target="_blank" />
         </div>
       </Paper>
     );
