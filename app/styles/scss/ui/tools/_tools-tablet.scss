@@ -1,0 +1,8 @@
+.tool {
+  @include media($tablet-landscape) {
+    @include span-columns(4);
+    @include omega(3n); // &:nth-child(3n) { margin-right: 0; }
+
+    height: 320px;
+  }
+}
