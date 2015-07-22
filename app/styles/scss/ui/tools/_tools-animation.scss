@@ -1,0 +1,46 @@
+// *** Tool ***
+.tool-appear {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.tool-appear.tool-appear-active {
+  opacity: 1;
+}
+
+.tool-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.tool-enter.tool-enter-active {
+  opacity: 1;
+}
+
+.tool-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.tool-leave.tool-leave-active {
+  opacity: 0.01;
+}
+
+// *** Tool Form ***
+.tool-form-enter {
+  right: -100%;
+  transition: right .5s;
+}
+
+.tool-form-enter.tool-form-enter-active {
+  right: 0;
+}
+
+.tool-form-leave {
+  right: 0;
+  transition: right .5s;
+}
+
+.tool-form-leave.tool-form-leave-active {
+  right: -100%;
+}
