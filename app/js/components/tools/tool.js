@@ -18,9 +18,11 @@ class Tool extends Component {
 
     return (
       <Paper className="tool" zDepth={2}>
-        <Paper className="tool__logo" zDepth={2} circle={true}>
-          {logoEl}
-        </Paper>
+        <div className="logo--wrapper">
+          <Paper className="tool__logo" zDepth={2} circle={true}>
+            {logoEl}
+          </Paper>
+        </div>
         <div className="tool--info">
           <p>{text}</p>
           <RaisedButton label={name} linkButton={true} secondary={true} href={url} target="_blank" />
