@@ -54,12 +54,12 @@
 
   .tool-form {
     @include box-shadow();
+    @include pad(10px 10px);
 
     background: $black;
     border-radius: 3px;
     bottom: 90px;
     margin: 12px 15px;
-    padding: 10px 10px;
     position: absolute;
     width: 300px;
   }
