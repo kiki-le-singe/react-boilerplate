@@ -21,10 +21,22 @@
 }
 
 .tools__list {
+  @include outer-container;
 }
 
 .tool {
+  @include span-columns(3);
+  @include omega(4n); // &:nth-child(4n) { margin-right: 0; }
+
   margin-bottom: 20px;
+  min-height: 300px;
+  padding: 15px;
+
+  .logo--wrapper {
+    height: 8em;
+    margin: auto;
+    width: 8em;
+  }
 
   .tool__logo {
     display: table-cell;
