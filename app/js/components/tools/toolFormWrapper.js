@@ -20,7 +20,7 @@ class ToolFormWrapper extends Component {
 
   render() {
     let form;
-    if (this.state.clicked) {
+    if (this.state.clicked) { // toggle form on click
       form = (<ToolForm key={1} />);
     }
 
