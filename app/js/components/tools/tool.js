@@ -25,6 +25,8 @@ class Tool extends Component {
         </div>
         <div className="tool--info">
           <p>{text}</p>
+        </div>
+        <div className="tool--actions">
           <RaisedButton label={name} linkButton={true} secondary={true} href={url} target="_blank" />
         </div>
       </Paper>
