@@ -19,7 +19,7 @@ class Tool extends Component {
     return (
       <Paper className="tool" zDepth={2} transitionEnabled={false}>
         <div className="logo--wrapper">
-          <Paper className="tool__logo" zDepth={2} circle={true}>
+          <Paper className="tool__logo" zDepth={2} circle={true} transitionEnabled={false}>
             {logoEl}
           </Paper>
         </div>
