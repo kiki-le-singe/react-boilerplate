@@ -1,9 +1,9 @@
 import React from 'react';
 import { MenuItem, LeftNav, Styles } from 'material-ui';
 
-let {PropTypes, Component} = React;
-let { Colors, Spacing, Typography } = Styles;
-let menuItems = [
+const {PropTypes, Component} = React;
+const { Colors, Spacing, Typography } = Styles;
+const menuItems = [
   { route: 'hello', text: 'Hello' },
   { route: 'about', text: 'About' },
   { route: 'tools', text: 'Tools' },

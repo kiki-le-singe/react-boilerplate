@@ -14,7 +14,7 @@ import Hello from './components/hello';
 import ToolBoxWrapper from './components/tools/toolBoxWrapper';
 import MyReactCanvas from './components/poc/my-react-canvas';
 
-let AppRoutes = (
+const AppRoutes = (
   <Route name="app" path="/" handler={App}>
     <DefaultRoute name="home" handler={Home} />
     <Route name="hello" path="hello" handler={Hello} />

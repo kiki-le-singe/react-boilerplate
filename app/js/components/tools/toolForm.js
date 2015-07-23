@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-let {PropTypes, Component, findDOMNode} = React;
+const {PropTypes, Component, findDOMNode} = React;
 
 class ToolForm extends Component {
   componentWillEnter(callback) {

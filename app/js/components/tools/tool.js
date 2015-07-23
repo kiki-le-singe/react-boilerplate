@@ -1,11 +1,11 @@
 import React from 'react';
 import { Paper, RaisedButton } from 'material-ui';
 
-let {PropTypes, Component} = React;
+const {PropTypes, Component} = React;
 
 class Tool extends Component {
   render() {
-    let {logo, url, name, text} = this.props;
+    const {logo, url, name, text} = this.props;
     let logoEl;
 
     if (logo) {

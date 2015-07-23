@@ -2,10 +2,10 @@ import React from 'react/addons';
 import AddToolButton from './addToolButton';
 import ToolForm from './toolForm';
 
-let { Component } = React;
+const { Component } = React;
 
 // https://facebook.github.io/react/docs/animation.html#getting-started
-let TransitionGroup = React.addons.TransitionGroup;
+const TransitionGroup = React.addons.TransitionGroup;
 
 class ToolFormWrapper extends Component {
   constructor() {

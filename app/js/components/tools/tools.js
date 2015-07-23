@@ -1,10 +1,10 @@
 import React from 'react/addons';
 import Tool from './tool';
 
-let {PropTypes, Component} = React;
+const {PropTypes, Component} = React;
 
 // https://facebook.github.io/react/docs/animation.html#getting-started
-let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 // Note:
 // When using ReactCSSTransitionGroup, there's no way for your components to be notified
@@ -13,11 +13,11 @@ let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 // API which provides the hooks you need to do custom transitions.
 
 // To use ReactTransitionGroup see: http://bl.ocks.org/mattborn/0e4f554713b78c408519
-// let ReactTransitionGroup = React.addons.TransitionGroup;
+// const ReactTransitionGroup = React.addons.TransitionGroup;
 
 class Tools extends Component {
   render() {
-    let {data} = this.props;
+    const {data} = this.props;
     let toolNodes = data.map((tool, index) => {
       return (
         <Tool url={tool.url} name={tool.name} logo={tool.logo} text={tool.text} key={index} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCanvas from 'react-canvas';
 
-let { Surface, Image, Text } = ReactCanvas;
+const { Surface, Image, Text } = ReactCanvas;
 
 class MyReactCanvas extends React.Component {
 

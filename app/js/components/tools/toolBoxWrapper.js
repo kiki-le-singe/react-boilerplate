@@ -3,7 +3,7 @@ import React from 'react';
 import ToolBox from './toolBox';
 import api from './config/api.json';
 
-let { PropTypes, Component } = React;
+const { PropTypes, Component } = React;
 
 class ToolBoxWrapper extends Component {
 

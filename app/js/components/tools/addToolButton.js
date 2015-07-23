@@ -1,6 +1,6 @@
 import React from 'react/addons';
 
-let {Component, PropTypes} = React;
+const {Component, PropTypes} = React;
 
 class AddToolButton extends Component {
   constructor() {

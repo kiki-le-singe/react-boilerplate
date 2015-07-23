@@ -2,11 +2,11 @@ import React from 'react';
 import Tools from './tools';
 import ToolFormWrapper from './toolFormWrapper';
 
-let {PropTypes, Component} = React;
+const {PropTypes, Component} = React;
 
 class ToolBox extends Component {
   render() {
-    let {data} = this.props;
+    const {data} = this.props;
 
     if (data.length) {
       return (
