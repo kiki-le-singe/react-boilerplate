@@ -1,13 +1,21 @@
-ul {
-  list-style-type: none;
-}
-.container {
-  text-align: center;
+a {
+  @include transition(color 0.3s ease-out);
 
-  h1 {
-    color: $white;
+  color: $black;
+  display: inline-block;
+  text-decoration: none;
+
+  i.fa {
+    @include transition(font-size 0.3s ease-out);
+
+    margin-right: 10px;
   }
-  p {
-    font-size: 1.2em;
+
+  &:hover {
+    color: $materialBlue;
+
+    i.fa {
+      font-size: 18px;
+    }
   }
 }
