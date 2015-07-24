@@ -4,6 +4,10 @@ import { Paper } from 'material-ui';
 const {PropTypes, Component} = React;
 
 class Tool extends Component {
+  handleClick = (e) => {
+    console.log(e.currentTarget.className, ': Coming soon...'); // eslint-disable-line
+  }
+
   render() {
     const {logo, url, name, desc} = this.props;
     let logoEl;
@@ -31,6 +35,12 @@ class Tool extends Component {
             <i className="fa fa-link"></i>{name}
           </a>
         </div>
+        <button type="button" className="tool__edit action" onClick={this.handleClick}>
+          <i className="fa fa-pencil"></i>
+        </button>
+        <button type="button" className="tool__remove action" onClick={this.handleClick}>
+          <i className="fa fa-trash-o"></i>
+        </button>
       </Paper>
     );
   }
