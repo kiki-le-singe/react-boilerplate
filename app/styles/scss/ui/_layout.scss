@@ -57,5 +57,16 @@ button.action {
       }
     }
   }
+
+  @include media($tablet-landscape) {
+    &:active {
+      height: 50px;
+      width: 50px;
+
+      i.fa {
+        font-size: 18px;
+      }
+    }
+  }
   // @TODO: REFACTOR - end
 }
