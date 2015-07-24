@@ -8,6 +8,11 @@ class Tool extends Component {
     console.log(e.currentTarget.className, ': Coming soon...'); // eslint-disable-line
   }
 
+  handleDelete = () => {
+    const { id, index } = this.props;
+    this.context.deleteTool(id, index);
+  }
+
   render() {
     const {logo, url, name, desc} = this.props;
     let logoEl;
@@ -38,7 +43,7 @@ class Tool extends Component {
         <button type="button" className="tool__edit action" onClick={this.handleClick}>
           <i className="fa fa-pencil"></i>
         </button>
-        <button type="button" className="tool__remove action" onClick={this.handleClick}>
+        <button type="button" className="tool__remove action" onClick={this.handleDelete}>
           <i className="fa fa-trash-o"></i>
         </button>
       </Paper>
@@ -47,10 +52,16 @@ class Tool extends Component {
 }
 
 Tool.propTypes = {
+  id: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
   logo: PropTypes.string,
   url: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired
+};
+
+Tool.contextTypes = {
+  deleteTool: PropTypes.func
 };
 
 export default Tool;
