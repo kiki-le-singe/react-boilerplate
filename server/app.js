@@ -29,6 +29,7 @@ app.use(express.static(path.join(applicationRoot, '../node_modules/font-awesome'
 
 // Docs: http://expressjs.com/guide/routing.html
 
+var id = 16;
 var router = express.Router(); // get an instance of the express Router
 
 // test route to make sure everything is working (accessed at GET http://localhost:9000/api)
@@ -44,9 +45,13 @@ router.route('/tools')
     }
     response.status(200).json(api.tools);
   })
+  // Post a tool
   .post(function (request, response) {
     var tools = api.tools;
-    tools.push(request.body);
+    var tool = request.body;
+
+    tool.id = id++;
+    tools.push(tool);
     response.status(200).json(tools);
   });
 
