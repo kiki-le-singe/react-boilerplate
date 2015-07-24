@@ -1,7 +1,7 @@
 a {
   @include transition(color 0.3s ease-out);
 
-  color: $black;
+  color: $materialBlue;
   display: inline-block;
   text-decoration: none;
 
@@ -12,7 +12,7 @@ a {
   }
 
   &:hover {
-    color: $materialBlue;
+    color: $green;
 
     i.fa {
       font-size: 18px;
