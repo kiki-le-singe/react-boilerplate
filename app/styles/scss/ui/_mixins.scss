@@ -5,3 +5,53 @@
   }
   box-shadow: $x $y $blur $distance $color;
 }
+
+// BUTTON DEVICE BEHAVIOR
+@mixin button-device-behavior($desktop: true) {
+  $height: 50px;
+  $width: 50px;
+  $fontSize: 18px;
+
+  @if $desktop {
+    &:hover {
+      height: $height;
+      width: $width;
+
+      i.fa {
+        font-size: $fontSize;
+      }
+    }
+  }
+
+  &:active {
+    height: $height;
+    width: $width;
+
+    i.fa {
+      font-size: $fontSize;
+    }
+  }
+}
+
+// LINK DEVICE BEHAVIOR
+@mixin link-device-behavior($desktop: true) {
+  $fontSize: 18px;
+
+  @if $desktop {
+    &:hover {
+      color: $green;
+
+      i.fa {
+        font-size: $fontSize;
+      }
+    }
+  }
+
+  &:active {
+    color: $green;
+
+    i.fa {
+      font-size: $fontSize;
+    }
+  }
+}
