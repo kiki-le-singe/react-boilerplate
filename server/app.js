@@ -37,8 +37,8 @@ router.get('/', function (request, response) {
   response.json({message: 'hooray! welcome to our api!'});
 });
 
-// Get a list of tools
 router.route('/tools')
+  // Get a list of tools
   .get(function (request, response) {
     if (stubArg) { // if stub enabled
       return response.json(stubTools);
