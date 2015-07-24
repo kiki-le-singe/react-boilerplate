@@ -3,7 +3,7 @@
     @include span-columns(3);
     @include omega(4n); // &:nth-child(4n) { margin-right: 0; }
 
-    height: 350px;
+    height: 330px;
 
     .logo--wrapper {
       margin: auto;
