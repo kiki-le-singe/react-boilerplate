@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
+import request from 'superagent';
 import ToolBox from './toolBox';
 import api from './config/api.json';
 
@@ -32,7 +33,8 @@ class ToolBoxWrapper extends Component {
   // - https://www.tildedave.com/2014/11/15/introduction-to-contexts-in-react-js.html
   getChildContext() {
     return {
-      onToolSubmit: this.handleToolSubmit
+      onToolSubmit: this.handleToolSubmit,
+      deleteTool: this.deleteTool
     };
   }
 
@@ -80,10 +82,29 @@ class ToolBoxWrapper extends Component {
       }
     });
   }
+
+  deleteTool = (id, index) => {
+    let newTools = this.state.data;
+    newTools.splice(index, 1);
+    this.setState({data: newTools});
+
+    request
+      .del(api.tools + '/' + id)
+      .end((err, res) => {
+        if (res.ok) {
+          console.log(api.tools, res.body); // eslint-disable-line
+          // this.setState({data: res.body});
+        }
+        else {
+          console.error(api.tools, res.text); // eslint-disable-line
+        }
+      });
+  }
 }
 
 ToolBoxWrapper.childContextTypes = {
-  onToolSubmit: PropTypes.func
+  onToolSubmit: PropTypes.func,
+  deleteTool: PropTypes.func
 };
 
 ToolBoxWrapper.defaultProps = {initialData: []};
