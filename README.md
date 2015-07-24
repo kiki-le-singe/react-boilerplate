@@ -100,6 +100,10 @@ By default the root access for the API is http://localhost:3000/api. Available e
 
  > Allows you to inspect the React component hierarchy.
 
+ * [Show me the React!](https://chrome.google.com/webstore/detail/show-me-the-react/iaebolhfcmodobkanmaahdhnlplncbnd?hl=en-US&gl=US)
+
+ > Highlight React components on the page.
+
 ### Contexts
 
  * [Contexts in React](https://facebook.github.io/react/blog/2014/03/28/the-road-to-1.0.html#context)
