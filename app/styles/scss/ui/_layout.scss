@@ -19,3 +19,43 @@ a {
     }
   }
 }
+
+button.action {
+  $radius: 50%;
+
+  @include border-top-radius($radius);
+  @include border-bottom-radius($radius);
+  @include transition(height 0.3s ease-out, width 0.3s ease-out);
+
+  border-style: none;
+  height: 44px;
+  width: 44px;
+
+  i.fa {
+    @include transition(font-size 0.2s ease-out);
+  }
+
+  // @TODO: REFACTOR - start
+  @include media($desktop) {
+    &:hover {
+      height: 50px;
+      width: 50px;
+
+      i.fa {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include media($phone-portrait) {
+    &:active {
+      height: 50px;
+      width: 50px;
+
+      i.fa {
+        font-size: 18px;
+      }
+    }
+  }
+  // @TODO: REFACTOR - end
+}
