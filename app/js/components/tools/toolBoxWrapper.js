@@ -42,6 +42,12 @@ class ToolBoxWrapper extends Component {
   // - https://facebook.github.io/react/docs/reusable-components.html#no-autobinding
   // Here the ES7 way is used. @see React on ES6+ by Steven Lusher: http://babeljs.io/blog/2015/06/07/react-on-es6-plus/
   handleToolSubmit = (tool) => {
+    let tools = this.state.data;
+    // Adds a tool before server return the response to improve the ui experience.
+    let newTools = tools.concat([tool]);
+    // uses the concat method rather than the push method because it do not change states without to use the setState() method
+    this.setState({data: newTools});
+
     // Submit to the server and refresh the list
     $.ajax({
       url: api.tools,
