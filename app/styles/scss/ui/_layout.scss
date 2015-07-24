@@ -11,12 +11,16 @@ a {
     margin-right: 10px;
   }
 
-  &:hover {
-    color: $green;
+  @include media($desktop) {
+    @include link-device-behavior();
+  }
 
-    i.fa {
-      font-size: 18px;
-    }
+  @include media($phone-portrait) {
+    @include link-device-behavior(false);
+  }
+
+  @include media($tablet-landscape) {
+    @include link-device-behavior(false);
   }
 }
 
@@ -35,38 +39,15 @@ button.action {
     @include transition(font-size 0.2s ease-out);
   }
 
-  // @TODO: REFACTOR - start
   @include media($desktop) {
-    &:hover {
-      height: 50px;
-      width: 50px;
-
-      i.fa {
-        font-size: 18px;
-      }
-    }
+    @include button-device-behavior();
   }
 
   @include media($phone-portrait) {
-    &:active {
-      height: 50px;
-      width: 50px;
-
-      i.fa {
-        font-size: 18px;
-      }
-    }
+    @include button-device-behavior(false);
   }
 
   @include media($tablet-landscape) {
-    &:active {
-      height: 50px;
-      width: 50px;
-
-      i.fa {
-        font-size: 18px;
-      }
-    }
+    @include button-device-behavior(false);
   }
-  // @TODO: REFACTOR - end
 }
