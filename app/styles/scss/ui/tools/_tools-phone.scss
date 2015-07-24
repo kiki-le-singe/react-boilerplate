@@ -41,6 +41,14 @@
       clear: both;
       padding-top: 15px;
     }
+
+    .tool__edit {
+      right: 13%;
+    }
+
+    .tool__remove {
+      right: -2%;
+    }
   }
 
   @include media($phone-landscape) {
