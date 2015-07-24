@@ -55,6 +55,22 @@ router.route('/tools')
     response.status(200).json(tools);
   });
 
+router.route('/tools/:id')
+  // Delete a tool
+  .delete(function (request, response) {
+    var tools = api.tools;
+    var count = tools.length;
+    var toolId = parseInt(request.params.id);
+
+    for (var i = 0; i < count; i++) {
+      if (tools[i].id === toolId) {
+        tools.splice(i, 1);
+        return response.status(200).json(tools);
+      }
+    }
+    response.status(404).send('Not deleted');
+  });
+
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 
