@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, RaisedButton } from 'material-ui';
+import { Paper } from 'material-ui';
 
 const {PropTypes, Component} = React;
 
@@ -27,7 +27,9 @@ class Tool extends Component {
           <p>{desc}</p>
         </div>
         <div className="tool--actions">
-          <RaisedButton label={name} linkButton={true} secondary={true} href={url} target="_blank" />
+          <a href={url} target="_blank">
+            <i className="fa fa-link"></i>{name}
+          </a>
         </div>
       </Paper>
     );
