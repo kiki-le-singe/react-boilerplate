@@ -93,7 +93,7 @@ class ToolBoxWrapper extends Component {
       .end((err, res) => {
         if (res.ok) {
           console.log(api.tools, res.body); // eslint-disable-line
-          // this.setState({data: res.body});
+          this.setState({data: res.body});
         }
         else {
           console.error(api.tools, res.text); // eslint-disable-line
