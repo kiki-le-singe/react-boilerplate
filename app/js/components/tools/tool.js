@@ -57,7 +57,7 @@ Tool.propTypes = {
   logo: PropTypes.string,
   url: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired
+  desc: PropTypes.string
 };
 
 Tool.contextTypes = {
