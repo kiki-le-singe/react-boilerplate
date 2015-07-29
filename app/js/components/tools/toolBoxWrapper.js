@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import request from 'superagent';
 import ToolBox from './toolBox';
@@ -51,18 +50,18 @@ class ToolBoxWrapper extends Component {
     this.setState({data: newTools});
 
     // Submit to the server and refresh the list
-    $.ajax({
-      url: api.tools,
-      dataType: 'json',
-      type: 'POST',
-      data: tool,
-      success: (data) => {
-        this.setState({data: data});
-      },
-      error: (xhr, status, err) => {
-        console.error(api.tools, status, err.toString()); // eslint-disable-line
-      }
-    });
+    request
+       .post(api.tools)
+       .type('form')
+       .send(tool)
+       .end((err, res) => {
+         if (res.ok) {
+           this.setState({data: res.body});
+         }
+         else {
+           console.error(api.tools, res.text); // eslint-disable-line
+         }
+       });
   }
 
   render() {
@@ -70,17 +69,16 @@ class ToolBoxWrapper extends Component {
   }
 
   loadToolsFromServer() {
-    $.ajax({
-      url: api.tools,
-      dataType: 'json',
-      cache: false,
-      success: (data) => {
-        this.setState({data: data});
-      },
-      error: (xhr, status, err) => {
-        console.error(api.tools, status, err.toString()); // eslint-disable-line
-      }
-    });
+    request
+       .get(api.tools)
+       .end((err, res) => {
+         if (res.ok) {
+           this.setState({data: res.body});
+         }
+         else {
+           console.error(api.tools, res.text); // eslint-disable-line
+         }
+       });
   }
 
   deleteTool = (id, index) => {
