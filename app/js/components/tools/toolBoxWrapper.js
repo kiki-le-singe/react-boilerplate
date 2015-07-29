@@ -1,7 +1,6 @@
 import React from 'react';
-import request from 'superagent';
 import ToolBox from './toolBox';
-import api from './config/api.json';
+import Tool from './services/tool';
 
 const { PropTypes, Component } = React;
 
@@ -50,18 +49,10 @@ class ToolBoxWrapper extends Component {
     this.setState({data: newTools});
 
     // Submit to the server and refresh the list
-    request
-       .post(api.tools)
-       .type('form')
-       .send(tool)
-       .end((err, res) => {
-         if (res.ok) {
-           this.setState({data: res.body});
-         }
-         else {
-           console.error(api.tools, res.text); // eslint-disable-line
-         }
-       });
+    Tool.create()
+      .then((data) => {
+        this.setState({data: data});
+      });
   }
 
   render() {
@@ -69,16 +60,10 @@ class ToolBoxWrapper extends Component {
   }
 
   loadToolsFromServer() {
-    request
-       .get(api.tools)
-       .end((err, res) => {
-         if (res.ok) {
-           this.setState({data: res.body});
-         }
-         else {
-           console.error(api.tools, res.text); // eslint-disable-line
-         }
-       });
+    Tool.fetch()
+      .then((data) => {
+        this.setState({data: data});
+      });
   }
 
   deleteTool = (id, index) => {
@@ -86,15 +71,9 @@ class ToolBoxWrapper extends Component {
     newTools.splice(index, 1);
     this.setState({data: newTools});
 
-    request
-      .del(api.tools + '/' + id)
-      .end((err, res) => {
-        if (res.ok) {
-          this.setState({data: res.body});
-        }
-        else {
-          console.error(api.tools, res.text); // eslint-disable-line
-        }
+    Tool.del(id)
+      .then((data) => {
+        this.setState({data: data});
       });
   }
 }
