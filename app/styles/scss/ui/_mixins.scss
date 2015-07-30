@@ -7,11 +7,7 @@
 }
 
 // BUTTON DEVICE BEHAVIOR
-@mixin button-device-behavior($desktop: true) {
-  $height: 50px;
-  $width: 50px;
-  $fontSize: 18px;
-
+@mixin button-device-behavior($desktop: true, $height: 50px, $width: 50px, $fontSize: 18px) {
   @if $desktop {
     &:hover {
       height: $height;
@@ -34,9 +30,7 @@
 }
 
 // LINK DEVICE BEHAVIOR
-@mixin link-device-behavior($desktop: true) {
-  $fontSize: 18px;
-
+@mixin link-device-behavior($desktop: true, $fontSize: 18px) {
   @if $desktop {
     &:hover {
       color: $green;
