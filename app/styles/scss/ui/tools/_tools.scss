@@ -72,12 +72,13 @@
     @include box-shadow();
     @include pad(10px 10px);
 
-    background: $black;
+    background: $white;
     border-radius: 3px;
+    border: 20px solid $black;
     bottom: 90px;
     margin: 12px 15px;
     position: absolute;
-    width: 300px;
+    width: 320px;
   }
 }
 
