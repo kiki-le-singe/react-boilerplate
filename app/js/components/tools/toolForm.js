@@ -53,15 +53,11 @@ class ToolForm extends Component {
   render() {
     return (
       <form className="tool-form" onSubmit={this.handleSubmit} ref="form">
-        <div>
-          <TextField floatingLabelText="Name" ref="name" />
-        </div>
-        <div>
-          <TextField floatingLabelText="Url" ref="url" />
-        </div>
-        <div>
-          <input type="submit" value="Post" className="button small radius" />
-        </div>
+        <TextField floatingLabelText="Name" ref="name" />
+        <TextField floatingLabelText="Url" ref="url" />
+        <button type="submit">
+          <i className="fa fa-thumbs-o-up"></i>
+        </button>
       </form>
     );
   }
