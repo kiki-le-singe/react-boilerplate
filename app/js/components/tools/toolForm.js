@@ -1,16 +1,10 @@
 import React from 'react';
 import $ from 'jquery';
+import uniqid from 'uniqid';
 
 const {PropTypes, Component, findDOMNode} = React;
 
 class ToolForm extends Component {
-
-  constructor() {
-    super();
-
-    // Add fake Id. The Tool component needs it as props. @see: Tools component - line 23
-    this.state = {id: 16};
-  }
 
   componentWillEnter(callback) {
     this.el = this.refs.form.getDOMNode();
@@ -40,7 +34,6 @@ class ToolForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    this.setState({id: this.state.id + 1}); // update fake id. @see this.constructor
 
     let name = findDOMNode(this.refs.name).value.trim();
     let url = findDOMNode(this.refs.url).value.trim();
@@ -49,9 +42,9 @@ class ToolForm extends Component {
     }
 
     // Calls the parent method passed by context that sends a request to the server
-    this.context.onToolSubmit({id: this.state.id, name: name, url: url});
     findDOMNode(this.refs.name).value = '';
     findDOMNode(this.refs.url).value = '';
+    this.context.onToolSubmit({id: uniqid(), name: name, url: url});
   }
 
   render() {
