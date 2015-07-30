@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import uniqid from 'uniqid';
+import { TextField } from 'material-ui';
 
 const {PropTypes, Component, findDOMNode} = React;
 
@@ -34,27 +35,29 @@ class ToolForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
+    let nameEl = this.refs.name;
+    let urlEl = this.refs.url;
+    let name = nameEl.getValue().trim();
+    let url = urlEl.getValue().trim();
 
-    let name = findDOMNode(this.refs.name).value.trim();
-    let url = findDOMNode(this.refs.url).value.trim();
     if (!name && !url) {
       return;
     }
 
     // Calls the parent method passed by context that sends a request to the server
-    findDOMNode(this.refs.name).value = '';
-    findDOMNode(this.refs.url).value = '';
     this.context.onToolSubmit({id: uniqid(), name: name, url: url});
+    nameEl.clearValue();
+    urlEl.clearValue();
   }
 
   render() {
     return (
       <form className="tool-form" onSubmit={this.handleSubmit} ref="form">
         <div>
-          <input type="text" placeholder="Name" ref="name" />
+          <TextField floatingLabelText="Name" ref="name" />
         </div>
         <div>
-          <input type="text" placeholder="Url" ref="url" />
+          <TextField floatingLabelText="Url" ref="url" />
         </div>
         <div>
           <input type="submit" value="Post" className="button small radius" />
