@@ -49,7 +49,7 @@ class ToolBoxWrapper extends Component {
     this.setState({data: newTools});
 
     // Submit to the server and refresh the list
-    Tool.create()
+    Tool.create(tool)
       .then((data) => {
         this.setState({data: data});
       });
