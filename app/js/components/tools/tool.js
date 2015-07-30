@@ -52,7 +52,7 @@ class Tool extends Component {
 }
 
 Tool.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.any.isRequired,
   index: PropTypes.number.isRequired,
   logo: PropTypes.string,
   url: PropTypes.string.isRequired,
