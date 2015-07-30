@@ -20,31 +20,37 @@ class Tool {
     }
 
     static create(tool) {
-      request
-         .post(api.tools)
-         .type('form')
-         .send(tool)
-         .end((err, res) => {
-           if (res.ok) {
-             this.setState({data: res.body});
-           }
-           else {
-             console.error(api.tools, res.text); // eslint-disable-line
-           }
-         });
+      return new Promise((resolve, reject) => {
+        request
+           .post(api.tools)
+           .type('form')
+           .send(tool)
+           .end((err, res) => {
+             if (res.ok) {
+               resolve(res.body);
+             }
+             else {
+               console.error(api.tools, res.text); // eslint-disable-line
+               reject(res.text);
+             }
+           });
+      });
     }
 
     static delete(id) {
-      request
-        .del(api.tools + '/' + id)
-        .end((err, res) => {
-          if (res.ok) {
-            this.setState({data: res.body});
-          }
-          else {
-            console.error(api.tools, res.text); // eslint-disable-line
-          }
-        });
+      return new Promise((resolve, reject) => {
+        request
+           .del(api.tools + '/' + id)
+           .end((err, res) => {
+             if (res.ok) {
+               resolve(res.body);
+             }
+             else {
+               console.error(api.tools, res.text); // eslint-disable-line
+               reject(res.text);
+             }
+           });
+      });
     }
 }
 
