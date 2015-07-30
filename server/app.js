@@ -15,7 +15,8 @@ var applicationRoot = __dirname,
     port = process.env.PORT || 9000, // set our port
     args = process.argv,
     stubArg = ('true' === args[2]),
-    api = require('./api/api');
+    api = require('./api/api')
+    uniqid = require('uniqid');
 
 // parses request body and populates request.body
 app.use(bodyParser.urlencoded({extended: true}));
@@ -29,7 +30,6 @@ app.use(express.static(path.join(applicationRoot, '../node_modules/font-awesome'
 
 // Docs: http://expressjs.com/guide/routing.html
 
-var id = 16;
 var router = express.Router(); // get an instance of the express Router
 
 // test route to make sure everything is working (accessed at GET http://localhost:9000/api)
@@ -50,7 +50,7 @@ router.route('/tools')
     var tools = api.tools;
     var tool = request.body;
 
-    tool.id = id++;
+    tool.id = uniqid();
     tools.push(tool);
     response.status(200).json(tools);
   });
@@ -60,10 +60,10 @@ router.route('/tools/:id')
   .delete(function (request, response) {
     var tools = api.tools;
     var count = tools.length;
-    var toolId = parseInt(request.params.id);
+    var toolId = request.params.id;
 
     for (var i = 0; i < count; i++) {
-      if (tools[i].id === toolId) {
+      if (tools[i].id == toolId) {
         tools.splice(i, 1);
         return response.status(200).json(tools);
       }
