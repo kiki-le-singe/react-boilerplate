@@ -71,7 +71,7 @@ class ToolBoxWrapper extends Component {
     newTools.splice(index, 1);
     this.setState({data: newTools});
 
-    Tool.del(id)
+    Tool.delete(id)
       .then((data) => {
         this.setState({data: data});
       });
