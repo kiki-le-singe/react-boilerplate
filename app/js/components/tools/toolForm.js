@@ -8,7 +8,7 @@ const {PropTypes, Component, findDOMNode} = React;
 class ToolForm extends Component {
 
   componentWillEnter(callback) {
-    this.el = this.refs.form.getDOMNode();
+    this.el = findDOMNode(this.refs.form);
     this.$el = $(this.el);
 
     this.$el.addClass('tool-form-enter');
