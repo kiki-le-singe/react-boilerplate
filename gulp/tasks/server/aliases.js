@@ -5,7 +5,7 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
-gulp.task('server', function(cb) {
+gulp.task('server-node', function(cb) {
   runSequence(
     'server-babel',
     'server-watch',
