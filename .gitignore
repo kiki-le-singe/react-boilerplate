@@ -7,4 +7,5 @@ app/bower_components
 app/styles/css
 app/js/bundle.js
 app/js/bundle.js.map
+server/bundle.js
 reports
