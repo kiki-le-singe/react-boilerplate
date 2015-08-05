@@ -1,6 +1,8 @@
 // Karma configuration
 // Generated on Tue Aug 04 2015 21:58:41 GMT+0200 (CEST)
 
+var babelify = require('babelify');
+
 module.exports = function(config) {
   config.set({
 
@@ -33,7 +35,12 @@ module.exports = function(config) {
 
     browserify: {
       debug: true,
-      transform: ['babelify']
+      // transform: ['babelify']
+      transform: [
+        babelify.configure({
+          stage: 0
+        })
+      ]
     },
 
 
