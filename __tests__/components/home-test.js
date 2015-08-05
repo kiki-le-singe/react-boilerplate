@@ -11,11 +11,11 @@ describe('Home', () => {
     home = renderIntoDocument(<Home />);
   });
 
-  it('should be a element', () => {
+  it('should be an element', () => {
     expect(isElement(<Home />)).toBeTruthy();
   });
 
-  it('should be a element of Home type', () => {
+  it('should be an element of Home type', () => {
     expect(isElementOfType(<Home />, Home)).toBeTruthy();
   });
 
