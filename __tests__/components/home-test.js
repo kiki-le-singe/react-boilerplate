@@ -4,6 +4,8 @@ import Home from '../../app/js/components/home';
 const { findDOMNode } = React;
 const { isElement, isElementOfType, renderIntoDocument, findRenderedDOMComponentWithTag } = React.addons.TestUtils;
 
+/* eslint-disable */
+
 describe('Home', () => {
   let home = null;
 
