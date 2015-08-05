@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> This project is first to train with tools like [babeljs.io](https://babeljs.io/), [React](https://facebook.github.io/react/index.html), ES6... And then I used it as Boilerplate.
+> This project is first to train with tools like [babeljs.io](https://babeljs.io/), [React](https://facebook.github.io/react/index.html), ES6... And then I used it as Boilerplate for my react projects.
 
 ## Requirements
 
