@@ -34,7 +34,9 @@ Makes the same thing that the above command, except that the 'stub' option allow
 
 * `$ gulp test`
 
-Coming soon...
+Runs tests located in `/__tests__`.
+
+> For now `$ gulp test` doesn't exist (Coming soon). You can to use the `karma start` command. It is useful for debug mode.
 
 * `$ gulp dist`
 
