@@ -6,6 +6,6 @@ module.exports = {
     indexSassFile: 'app/styles/scss/index.scss'
   },
   fonts: {
-    path: 'fonts',
+    path: '/fonts'
   }
 };
