@@ -1,15 +1,13 @@
 'use strict';
 
 var sassDir = 'app/styles/scss';
-var fontAwesomeIconFontsDir = '/fonts/';
+var fontAwesomeIconFontsDir = '/fonts';
 
 module.exports = {
   sass: {
     cssDir: 'app/styles/css',
-    mainSassFile: sassDir + '/main.scss',
-    dist: {
-      dest: 'dist/styles/'
-    }
+    indexSassFile: sassDir + '/index.scss',
+    dest: 'dist/styles/'
   },
   fonts: {
     src: [
@@ -20,12 +18,7 @@ module.exports = {
       fontAwesomeIconFontsDir + '*.woff2',
       fontAwesomeIconFontsDir + '*.otf'
     ],
-    dev: {
-      path: fontAwesomeIconFontsDir // in node_modules/font-awesome/fonts/
-    },
-    dist: {
-      path: 'fonts',
-      dest: 'dist/styles/fonts/'
-    }
+    path: 'fonts',
+    dest: 'dist/styles/fonts/'
   }
 };

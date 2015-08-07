@@ -11,23 +11,16 @@ var $ = require('gulp-load-plugins')();
 var sassConfig = require('./config').sass;
 var fontsConfig = require('./config').fonts;
 
-gulp.task('sass:dev', function () {
-  return gulp.src(sassConfig.mainSassFile)
-    .pipe($.sass())
-    .pipe($.preprocess({context: {PATH: fontsConfig.dev.path}}))
-    .pipe(gulp.dest(sassConfig.cssDir));
-});
-
 gulp.task('sass:dist', function () {
-  return gulp.src(sassConfig.mainSassFile)
+  return gulp.src(sassConfig.indexSassFile)
     .pipe($.sass())
-    .pipe($.rename('main.min.css'))
-    .pipe($.preprocess({context: {PATH: fontsConfig.dist.path}}))
+    .pipe($.rename('app.min.css'))
+    .pipe($.preprocess({context: {PATH: fontsConfig.path}}))
     .pipe($.minifyCss())
-    .pipe(gulp.dest(sassConfig.dist.dest));
+    .pipe(gulp.dest(sassConfig.dest));
 });
 
 gulp.task('fonts:dist', function () {
   return gulp.src(fontsConfig.src)
-    .pipe(gulp.dest(fontsConfig.dist.dest));
+    .pipe(gulp.dest(fontsConfig.dest));
 });

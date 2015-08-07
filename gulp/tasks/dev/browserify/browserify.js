@@ -11,9 +11,6 @@
   // https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
 // https://www.npmjs.com/package/gutil
 // https://www.npmjs.com/package/lodash
-// https://github.com/milankinen/livereactload
-  // https://github.com/milankinen/livereactload/tree/master/examples/05-build-systems
-  // https://github.com/milankinen/livereactload/blob/master/examples/05-build-systems/gulpfile.js
 
 var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
@@ -24,7 +21,6 @@ var gutil = require('gulp-util');
 var watchify = require('watchify');
 var _ = require('lodash');
 var browserify = require('browserify');
-// var lrload = require('livereactload');
 var config = require('./config').browserify;
 
 // add custom browserify options here
@@ -39,24 +35,18 @@ var b = watchify(browserify(opts));
 b.transform(babelify.configure({
   stage: 0 // enable entire experimental ES7 features
 }));
-// b.transform(lrload);
 
 function bundle() {
-  // start listening reload notifications
-  // lrload.listen();
-  // lrload.monitor('app/js/bundle.js', {displayNotification: true});
-
   return b.bundle()
     // log errors if they happen
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
-    .pipe(source(config.dev.source))
+    .pipe(source(config.source))
     // optional, remove if you don't need to buffer file contents
     .pipe(buffer())
     // optional, remove if you dont want sourcemaps
     .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
     .pipe(sourcemaps.write('./')) // writes .map file
-    .pipe(gulp.dest(config.dev.dest));
-    // .pipe(lrload.gulpnotify());
+    .pipe(gulp.dest(config.dest));
 }
 
 gulp.task('scripts:dev', bundle); // so you can run `gulp scripts:dev` to build the file

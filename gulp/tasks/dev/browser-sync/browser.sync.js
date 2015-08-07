@@ -13,8 +13,7 @@ var config = require('./config').browserSync;
 
 gulp.task('open:server', function () {
   browserSync({
-    proxy: config.proxy,
-    port: 3001
+    proxy: config.proxy
   });
 
   gulp.watch([config.css, config.js], reload);
